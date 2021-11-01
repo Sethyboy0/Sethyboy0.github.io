@@ -1,0 +1,166 @@
+#everythingWrapper {
+  margin: auto;
+  width: 590px;
+}
+
+#info {
+  width: 590px;
+}
+
+#scoreDisplay, #tierDisplay {
+  margin-bottom: 20px;
+}
+
+#errorMessage {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#nonWeapon {
+  width: 240px;
+  margin-right: 80px;
+}
+
+#weaponFlameTier {
+  width: 350px;
+}
+
+#calcWrapper {
+  display: flex;
+  width: fit-content;
+}
+
+td, th {
+  width: 30px;
+}
+
+td, th, table {
+  border: 1px ridge black;
+  border-collapse: collapse;
+}
+
+#tierDisplay {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#scoreDisplay, #weapTierWrapper {
+  font-size: 15pt;
+}
+
+button {
+  display: block;
+  margin: 4px 0;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+}
+
+#statsInput, #statSelection, #weaponTierInputs {
+  width: 224px;
+}
+
+#statsInput input {
+  width: 120px;
+}
+
+#weaponTierInputs input {
+  width: 100px;
+}
+
+#weaponTierInputs select {
+  width: 108px;
+}
+
+#weaponTierInputs #flameAdvantage {
+  width: 20px;
+}
+
+.check {
+  width: 220px;  
+}
+
+/* Item cards */
+#itemCards {
+  width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+div.itemCard {
+  width: fit-content;
+  height: fit-content;
+  border: 3px outset grey;
+  padding: 4px;
+  margin: 4px;
+}
+
+.itemName {
+  width: 84px;
+  margin-bottom: 2px;
+}
+
+.bottomButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.saveButton {
+  width: 100%
+}
+
+.bottomButtons button {
+  width: 48%;
+  padding: 1px;
+}
+
+h2 {
+  display: inline-block;
+}
+
+#cardAmountButtons button {
+  display: inline;
+  width: 20 px;
+}
+
+/* Stolen from https://www.w3schools.com/css/css_tooltip.asp */
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  width: 500px;
+  top: 100%;
+  left: 50%;
+  margin-left: -100px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
