@@ -618,9 +618,13 @@ function handleError(err) {
   document.getElementById("errorMessage").innerHTML = message;
 }
 
-try {
- initPage();
+function ready () {
+    try {
+     initPage();
+    }
+    catch (err) {
+      handleError(err);
+    } 
 }
-catch (err) {
-  handleError(err);
-}
+
+document.addEventListener("DOMContentLoaded", ready);
