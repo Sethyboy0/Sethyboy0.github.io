@@ -1,191 +1,201 @@
 <!DOCTYPE html>
-<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-<html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script type="text/javascript" src="flameScoreCalc.js"></script>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Flame Score Calculator</title>
-  <link rel="stylesheet" href="flameScoreCalc.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flame Score Calculator</title>
+    <link rel="stylesheet" href="flameScoreCalc.css">
 </head>
 <body>
-  <div id="everythingWrapper">
-  <div id="info">
-    <h1>Flame Score Calculator</h1>
-    <p>This is a calculator for Scardor's flame score system. You can read more about how it works <a href="https://bit.ly/2zHMInA">here</a> and ask him any questions about it on <a href="https://www.twitch.tv/scardor">Twitch</a> or <a href="https://discord.gg/n9MywuN">Discord</a>.</p>
-    <p>Message sethyboy0 on Twitch/Reddit/Discord(Sethyboy0#4396) if anything is broken or annoying or you just wanna say thanks.</p>
-  <div id="errorMessage"/> </div>
-    <div>
-      <input checked type="radio" name="gameStage" value="late">Late Game</input>
-      <input type="radio" name="gameStage" value="end">End Game</input>
+<div id="everythingWrapper">
+    <div id="info">
+        <h1>Flame Score Calculator</h1>
+        <p>This is a calculator for Scardor's flame score system. You can read more about how it works <a
+                href="https://bit.ly/2zHMInA">here</a> and ask him any questions about it on <a
+                href="https://www.twitch.tv/scardor">Twitch</a> or <a href="https://discord.gg/n9MywuN">Discord</a>.</p>
+        <p>Message sethyboy0 on Twitch/Reddit/Discord(Sethyboy0#4396) if anything is broken or annoying or you just
+            wanna say thanks.</p>
+        <div id="errorMessage"></div>
+        <div>
+            <label>
+                <input checked type="radio" name="gameStage" value="late">
+                Late Game
+            </label>
+            <label>
+                <input type="radio" name="gameStage" value="end">
+                End Game
+            </label>
+        </div>
     </div>
-  </div>
-<h2>Your Character</h2>
+  <h2>Your Character</h2>
   <span class="tooltip">?
-    <span class="tooltiptext">
-      <p>Select your class in the dropdown. If your class isn't there, select your class's main stat. No DA yet.</p>
-    </span>
+  <span class="tooltiptext">
+    Select your class in the dropdown. If your class isn't there, select your class's main stat. No DA yet.
   </span>
-<div id="player">
-  <div id="statSelection">
-    <div>
-      <label for="classType"> Class/Main Stat: </label>
-      <Select id="classType">
-        <optgroup label="Special Classes">
-          <Option value="xenon">Xenon</Option>
-          <Option value="kanna">Kanna</Option>
-          <Option value="memeThief" selected>Shadower/DB/Cadena</Option>
-        </optgroup>
-        <optgroup label="Normal Classes">
-          <Option value="str">Str</Option>
-          <Option value="dex">Dex</Option>
-          <Option value="int">Int</Option>
-          <Option value="luk">Luk</Option>
-        </optgroup>
-      </Select>
-    </div>
-  </div>
-</div>
-<div id="calcWrapper">
-  <div id="nonWeapon">
-    <h2> Item Flame Calculator </h2>
-    <div id="scoreDisplay">
-      <span> Flame Score: </span>
-      <span id="nonWeapScore">0</span>
-    </div>
-    <div id="statsInput">
-      <div class="input">
-        <label for="str"> Str </label>
-        <input type="number" id="str">
-      </div>
-      <div class="input">
-        <label for="dex"> Dex </label>
-        <input type="number" id="dex">
-      </div>
-      <div class="input">
-        <label for="int"> Int </label>
-        <input type="number" id="int">
-      </div>
-      <div class="input">
-        <label for="luk"> Luk </label>
-        <input type="number" id="luk">
-      </div>
-      <div class="input">
-        <label for="hp"> HP </label>
-        <input type="number" id="hp">
-      </div>
-      <div class="input">
-        <label for="mp"> MP </label>
-        <input type="number" id="mp">
-      </div>
-      <div class="input">
-        <label for="wAtt"> W. Att </label>
-        <input type="number" id="wAtt">
-      </div>
-      <div class="input">
-        <label for="mAtt"> M. Att </label>
-        <input type="number" id="mAtt">
-      </div>
-      <div class="input">
-        <label for="allStat"> All Stat (%) </label>
-        <input type="number" id="allStat">
-      </div>
-    </div>
-    <div id="buttons">
-      <button onCLick="calcFlameScore()" id="calcBtn">Calculate</button>
-      <button onCLick="resetNumbers()" id="resetBtn">Reset</button>
-    </div>
-  </div>
-  <div id="weaponFlameTier">
-    <h2>Weapon Flame Tier</h2>
-    <div id="tierDisplay">
-      <div id="weapTierWrapper">
-        <span> Tier: </span>
-        <span id="weapTier">0</span>
-      </div>
-      <div>Attack flame tiers: </div>
-      <div>
-        <table>
-          <tr>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
-            <th>4</th>
-            <th>5</th>
-            <th>6</th>
-            <th>7</th>
-          </tr>
-          <tr>
-            <td id="wt0">0</td>
-            <td id="wt1">0</td>
-            <td id="wt2">0</td>
-            <td id="wt3">0</td>
-            <td id="wt4">0</td>
-            <td id="wt5">0</td>
-            <td id="wt6">0</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <div id="weaponTierInputs">
-      <div class="check">
-        <label for="flameAdvantage"> Flame advantaged? </label>
-        <input type="checkbox" id="flameAdvantage">
-      </div>
-      <div class="input">
-        <label for="levelRange"> Weapon Level </label>
-        <Select id="levelRange">
-          <Option value="1">0-39</Option>
-          <Option value="2">40-79</Option>
-          <Option value="3">80-119</Option>
-          <Option value="4">120-159</Option>
-          <Option value="5" selected>160-199</Option>
-          <Option value="6">200-239</Option>
-          <Option value="7">240-275</Option>
-        </Select>
-      </div>
-      <div class="input">
-        <label for="baseAttack"> Base Attack </label>
-        <input id="baseAttack">
-      </div>
-      <div class="input">
-        <label for="flameAttack"> Attack Flame </label>
-        <input id="flameAttack">
-      </div>
-      <div>
-        <button onClick="onWeaponFlameBtnClick()" id="calcWeaponFlameBtn">Calculate</button>
-        <button onClick="onClearWeaponFlame()" id="clearWeaponFlameBtn">Clear</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="yourItems">
-  <h2>Your Items</h2>
-  <span class="tooltip">?
-    <span class="tooltiptext">
-      <p>Keep track of your items here to easily compare them.</p>
-      <p>Click save to save the contents of the item flame calculator into the card.
-        Click edit to load the item back into the calculator so you can change it.
-      I'm sure you can figure out what clear does.</p>
-    </span>
   </span>
-  <div id="itemCards">
-  </div>
-  <div id="cardAmountButtons">
-        <button onClick="onAddCardsClick()" id="addCardsBtn">+</button>
-        <button onClick="onRemoveCardsClick()" id="removeCardsBtn">-</button>
-  </div>
-  <div class="itemCardTemplate">
-    <input type="text" placeholder="Enter a name" class="itemName">
-    <div><span>Score: </span><span class="js-score">0</span></div>
-    <button class="saveButton">Save</button>
-    <div class="bottomButtons">
-      <button class="editButton">Edit</button>
-      <button class="clearButton">Clear</button>
+    <div id="player">
+        <div id="statSelection">
+            <div>
+                <label for="classType"> Class/Main Stat: </label>
+                <Select id="classType">
+                    <optgroup label="Special Classes">
+                        <Option value="xenon">Xenon</Option>
+                        <Option value="kanna">Kanna</Option>
+                        <Option value="memeThief" selected>Shadower/DB/Cadena</Option>
+                    </optgroup>
+                    <optgroup label="Normal Classes">
+                        <Option value="str">Str</Option>
+                        <Option value="dex">Dex</Option>
+                        <Option value="int">Int</Option>
+                        <Option value="luk">Luk</Option>
+                    </optgroup>
+                </Select>
+            </div>
+        </div>
     </div>
-  </div>
+    <div id="calcWrapper">
+        <div id="nonWeapon">
+            <h2> Item Flame Calculator </h2>
+            <div id="scoreDisplay">
+                <span> Flame Score: </span>
+                <span id="nonWeapScore">0</span>
+            </div>
+            <div id="statsInput">
+                <div class="input">
+                    <label for="str"> Str </label>
+                    <input type="number" id="str">
+                </div>
+                <div class="input">
+                    <label for="dex"> Dex </label>
+                    <input type="number" id="dex">
+                </div>
+                <div class="input">
+                    <label for="int"> Int </label>
+                    <input type="number" id="int">
+                </div>
+                <div class="input">
+                    <label for="luk"> Luk </label>
+                    <input type="number" id="luk">
+                </div>
+                <div class="input">
+                    <label for="hp"> HP </label>
+                    <input type="number" id="hp">
+                </div>
+                <div class="input">
+                    <label for="mp"> MP </label>
+                    <input type="number" id="mp">
+                </div>
+                <div class="input">
+                    <label for="wAtt"> W. Att </label>
+                    <input type="number" id="wAtt">
+                </div>
+                <div class="input">
+                    <label for="mAtt"> M. Att </label>
+                    <input type="number" id="mAtt">
+                </div>
+                <div class="input">
+                    <label for="allStat"> All Stat (%) </label>
+                    <input type="number" id="allStat">
+                </div>
+            </div>
+            <div id="buttons">
+                <button onCLick="calcFlameScore()" id="calcBtn">Calculate</button>
+                <button onCLick="resetNumbers()" id="resetBtn">Reset</button>
+            </div>
+        </div>
+        <div id="weaponFlameTier">
+            <h2>Weapon Flame Tier</h2>
+            <div id="tierDisplay">
+                <div id="weapTierWrapper">
+                    <span> Tier: </span>
+                    <span id="weapTier">0</span>
+                </div>
+                <div>Attack flame tiers:</div>
+                <div>
+                    <table>
+                        <tr>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                        </tr>
+                        <tr>
+                            <td id="wt0">0</td>
+                            <td id="wt1">0</td>
+                            <td id="wt2">0</td>
+                            <td id="wt3">0</td>
+                            <td id="wt4">0</td>
+                            <td id="wt5">0</td>
+                            <td id="wt6">0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="weaponTierInputs">
+                <div class="check">
+                    <label for="flameAdvantage"> Flame advantaged? </label>
+                    <input type="checkbox" id="flameAdvantage">
+                </div>
+                <div class="input">
+                    <label for="levelRange"> Weapon Level </label>
+                    <Select id="levelRange">
+                        <Option value="1">0-39</Option>
+                        <Option value="2">40-79</Option>
+                        <Option value="3">80-119</Option>
+                        <Option value="4">120-159</Option>
+                        <Option value="5" selected>160-199</Option>
+                        <Option value="6">200-239</Option>
+                        <Option value="7">240-275</Option>
+                    </Select>
+                </div>
+                <div class="input">
+                    <label for="baseAttack"> Base Attack </label>
+                    <input id="baseAttack">
+                </div>
+                <div class="input">
+                    <label for="flameAttack"> Attack Flame </label>
+                    <input id="flameAttack">
+                </div>
+                <div>
+                    <button onClick="onWeaponFlameBtnClick()" id="calcWeaponFlameBtn">Calculate</button>
+                    <button onClick="onClearWeaponFlame()" id="clearWeaponFlameBtn">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="yourItems">
+        <h2>Your Items</h2>
+        <div class="tooltip">?
+          <div class="tooltiptext">
+            <p>Keep track of your items here to easily compare them.</p>
+            <p>Click save to save the contents of the item flame calculator into the card.
+              Click edit to load the item back into the calculator so you can change it.
+            I'm sure you can figure out what clear does.</p>
+          </div>
+        </div>
+        <div id="itemCards">
+        </div>
+        <div id="cardAmountButtons">
+            <button onClick="onAddCardsClick()" id="addCardsBtn">+</button>
+            <button onClick="onRemoveCardsClick()" id="removeCardsBtn">-</button>
+        </div>
+        <div class="itemCardTemplate">
+          <label>
+            <input type="text" placeholder="Enter a name" class="itemName">
+          </label>
+          <div><span>Score: </span><span class="js-score">0</span></div>
+            <button class="saveButton">Save</button>
+            <div class="bottomButtons">
+                <button class="editButton">Edit</button>
+                <button class="clearButton">Clear</button>
+            </div>
+        </div>
+    </div>
 </div>
-  </div>
-
+</body>
 </html>
-
-<script src="flameScoreCalc.js"></script>

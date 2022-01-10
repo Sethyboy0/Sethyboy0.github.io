@@ -55,9 +55,9 @@
 //  Added my Discord to the contact info.
 //  Quality of life improvements:
 //    Inputs not related to your class are hidden.
-//    Clicking reset sets your focus on the first relevant stat so you can quickly enter another flame.
+//    Clicking reset sets your focus on the first relevant stat, so you can quickly enter another flame.
 //    Ditto for changing main stat, changing game stage, editing a saved item card, or saving a new item card.
-//    Saving an item card resets the inputs so you can quickly enter the next item.
+//    Saving an item card resets the inputs, so you can quickly enter the next item.
 //    Clearing the weapon flame calc or changing the level focuses the attack input.
 //
 // December 22nd 2020:
@@ -236,7 +236,7 @@ function getStatValues() {
   statValues[attackType] += scoreByStage[gameStage].attack;
   
   // Bonus Kanna memes.
-  if (classType == "kanna") {
+  if (classType === "kanna") {
     Object.assign(statValues, kannaExtraStatValues[gameStage]);
   }
   
@@ -342,8 +342,9 @@ function onWeaponFlameBtnClick() {
 }
 
 function onClearWeaponFlame() {
-  $('#flameAttack, #baseAttack').val("");
-  $('#flameAttack, #baseAttack').trigger("change");
+  const $attackInputs = $('#flameAttack, #baseAttack');
+  $attackInputs.val("");
+  $attackInputs.trigger("change");
   focusWeaponAttackInput();
 }
 
@@ -357,15 +358,15 @@ function calcWeaponFlameTier() {
   // Find the right value.
   let flameTier = 0;
   let tierList = [];
-  // To display possibilites
+  // To display possibilities
   baseValues.forEach((value, index) => {
     const predictedAttack = Math.ceil((levelMult * value) * baseAttack) || 0;
     tierList.push(predictedAttack);
-    if (flameAttack == predictedAttack) { flameTier = index + 1; }
+    if (flameAttack === predictedAttack) { flameTier = index + 1; }
   });
   
   // Flame advantaged starts at tier 3.
-  if (flameAdvantaged && flameTier != 0) { flameTier += 2; }
+  if (flameAdvantaged && flameTier !== 0) { flameTier += 2; }
   
   return {
     flameTier: flameTier,
@@ -458,7 +459,7 @@ function makeSaveHandler(card, index) {
     statFields.name = card.find('.itemName').val() || "";
     // Update the card.
     const flameScore = $('#nonWeapScore').text();
-    card.find('.js-score').text(flameScore) || 0;
+    card.find('.js-score').text(flameScore || 0);
     // Save to local storage.
     window.localStorage.setItem("savedItem" + index, JSON.stringify(statFields));
     // Get user ready for next item
@@ -474,7 +475,7 @@ function makeEditHandler(index) {
     if (!stats) {
       resetNumbers();
       return;
-    };
+    }
     setGearStats(stats);
     // Get user ready for next item
     focusFirstRelevantInput();
@@ -484,7 +485,7 @@ function makeEditHandler(index) {
 function makeClearHandler(card, index) {
   return function() {
     // Clear the local storage.
-    const stats = window.localStorage.removeItem("savedItem" + index);
+    window.localStorage.removeItem("savedItem" + index);
     // Reset card fields.
     card.find('.itemName').val("");
     card.find('.js-score').text(0)
@@ -555,7 +556,7 @@ function addSaveHandler(inputName) {
   $("#"+inputName).on("change", () => storeInputChoice(inputName));
 }
 
-// These inputs don't behave as nice so they get their own function.
+// These inputs don't behave as nice, so they get their own function.
 function addWeirdSaveHandlers() {
   $("input:radio[name=gameStage]").on("change", () => 
                                       storeRadio("gameStage"));
@@ -596,12 +597,14 @@ function initPage() {
   
   // Add change handlers to the inputs.
   $("#classType, #str, #dex, #int, #luk, #hp, #mp, #wAtt, #mAtt, #allStat, input[name='gameStage']").on("change keyup", updateFlameScore);
-  
+
+  const scoreTypeSelectors = $("#classType, input[name='gameStage']");
   // Add QoL handlers.
-  $("#classType, input[name='gameStage']").on("change", getReadyForInput);                           $("#resetBtn").on("click", getReadyForInput);
+  scoreTypeSelectors.on("change", getReadyForInput);
+  $("#resetBtn").on("click", getReadyForInput);
   
   // Reset cards on changes that require recalculating scores.
-  $("#classType, input[name='gameStage']").on("change", initCards);
+  scoreTypeSelectors.on("change", initCards);
   
   // Weapon flame score stuff
   $('#baseAttack, #levelRange').on('change keyup', updatePossibleFlameTiers);
@@ -614,8 +617,7 @@ function initPage() {
 }
 
 function handleError(err) {
- var message = "There was an error loading the calculator. Please contact Sethyboy0 and show him this:<br><br>" + err.message; 
-  document.getElementById("errorMessage").innerHTML = message;
+  document.getElementById("errorMessage").innerHTML = "There was an error loading the calculator. Please contact Sethyboy0 and show him this:<br><br>" + err.message;
 }
 
 function ready () {
