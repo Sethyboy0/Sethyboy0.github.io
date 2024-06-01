@@ -72,9 +72,17 @@
 //   More tweaks to fix abso katana t7 flame
 //       Tier 7 10.246? % (fuck I already forget) -> 10.2487 % 
 //       (thanks whoever put that extremely specific value on strategywiki
-// August 4th 2021L
+//
+// August 4th 2021:
 //   Update Kanna values:
-//     Endgame M.att 
+//     Endgame M.att
+//
+// June 1st 2024:
+//    Updated flame score values to reflect Scardor's updated numbers:
+//      Late game allstat form 8.5 to 9
+//      End game allstat from 9 to 10
+//      Kanna late game HP/MP from 1/112 from 1/70
+//      Kanna end game HP/MP from 1/150 to 1/100
 
 
 
@@ -113,8 +121,8 @@ const ezClap = {
 
 // How much flame score each stat is worth.
 const baseStatValues = {
-  late: Object.assign({allStat: 8.5}, ezClap),
-  end: Object.assign({allStat: 9}, ezClap),
+  late: Object.assign({allStat: 9}, ezClap),
+  end: Object.assign({allStat: 10}, ezClap),
   };
 
 // How much certain stats are worth based on game stage.
@@ -151,12 +159,12 @@ const xenonStatValues = {
 
 const kannaExtraStatValues = {
   late: {
-    hp: 1/112,
-    mp: 1/112,
+    hp: 1/70,
+    mp: 1/70,
   },
   end: {
-    hp: 1/150,
-    mp: 1/150,
+    hp: 1/100,
+    mp: 1/100,
     mAtt: 2.5,
   },
 }
