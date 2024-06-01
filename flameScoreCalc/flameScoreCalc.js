@@ -83,6 +83,8 @@
 //      End game allstat from 9 to 10
 //      Kanna late game HP/MP from 1/112 from 1/70
 //      Kanna end game HP/MP from 1/150 to 1/100
+//      Melee thief late game allstat from 9 to 9.5
+//      Melee thief end game allstat from 10 to 11.5
 //    Fixed discord link.
 //    Updated my discord name.
 //    Added a link to Starlinez' calculator for people who want to save more items.
@@ -173,8 +175,8 @@ const kannaExtraStatValues = {
 }
 
 const doubleSecondaryAllStatVal = {
-  late: 9,
-  end: 10,
+  late: 9.5,
+  end: 11.5,
 }
 
 function calcFlameScore(gearStats) {
