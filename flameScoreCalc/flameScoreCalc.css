@@ -125,7 +125,12 @@ h2 {
 
 #cardAmountButtons button {
   display: inline;
-  width: 20 px;
+  width: 20px;
+}
+
+#starlinezLink {
+  padding-bottom: 24px;
+  padding-top: 8px;
 }
 
 /* Stolen from https://www.w3schools.com/css/css_tooltip.asp */
