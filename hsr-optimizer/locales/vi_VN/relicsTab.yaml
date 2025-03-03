@@ -1,0 +1,144 @@
+RelicFilterBar:
+  Part: Phần
+  Enhance: Cường Hóa
+  Grade: Độ Hiếm
+  Verified: Đã xác minh
+  Equipped: Đã trang bị
+  Clear: Xóa
+  ClearButton: Xóa tất cả bộ lọc
+  Set: Bộ
+  Mainstat: Dòng Chính
+  Substat: Thuộc tính phụ
+  ReapplyButton: Áp dụng lại điểm
+  ScoringButton: Thuật toán chấm điểm
+  RecommendationHeader: Đề xuất di vật cho nhân vật
+  Rating: Đánh giá di vật
+  CustomCharsHeader: Tùy chỉnh nhân vật tiềm năng
+Messages:
+  AddRelicSuccess: Thêm di vật mới thành công
+  NoRelicSelected: Không di vật nào được chọn
+  DeleteRelicSuccess: Xóa di vật thành công
+RelicGrid:
+  To: tới
+  Of: của
+  Headers:
+    EquippedBy: Chủ sở hữu
+    Set: Bộ
+    Part: Bộ phận
+    MainStat: |-
+      Thuộc Tính
+      Chính
+    MainValue: |-
+      Giá Trị
+      Chính
+    HPP: HP %
+    ATKP: ATK %
+    DEFP: DEF %
+    HP: HP
+    ATK: Tấn Công
+    DEF: Phòng Thủ
+    SPD: Tốc Độ
+    CR: |-
+      Tỉ Lệ
+      Bạo Kích
+    CD: |-
+      ST
+      Bạo Kích
+    EHR: |-
+      Chính Xác
+      Hiệu Ứng
+    RES: |-
+      Kháng
+      Hiệu Ứng
+    BE: |-
+      Tấn Công
+      Kích Phá
+    CV: |-
+      Giá Trị
+      Bạo Kích
+  ValueColumns:
+    SelectedCharacter:
+      Label: Nhân vật được chọn
+      ScoreCol:
+        Label: "Nhân vật được chọn: Điểm"
+        Header: |-
+          Nhân vật chọn
+          Điểm
+      AvgPotCol:
+        Label: "Nhân vật được chọn: Tiềm năng trung bình"
+        Header: |-
+          Nhân vật tiềm năng trung bình
+      MaxPotCol:
+        Label: "Nhân vật được chọn: Tiềm năng tối đa"
+        Header: |-
+          Tiềm Năng Nhân
+          Vật Tối Đa
+      RerollAvg:
+        Label: "Nhân vật đã chọn: Tiềm năng chia lại chỉ số trung bình."
+        Header: |-
+          Nhân vật chọn  
+          Chia lại
+      RerollAvgDelta:
+        Label: "Nhân vật đã chọn: Xoay lại tiềm năng delta trung bình"
+        Header: |-
+          Giá Trị Δ Reroll cho nhân vật
+    CustomCharacters:
+      Label: Tùy chọn nhân vật
+      AvgPotCol:
+        Label: "Tùy chọn nhân vật: Tiềm năng trung bình"
+        Header: |-
+          Nhân vật chọn tiềm năng
+      MaxPotCol:
+        Label: "Tùy chọn nhân vật: Tiềm năng tối đa"
+        Header: |-
+          Nhân vật chọn tiềm năng tối đa
+      RerollAvg:
+        Label: "Nhân vật tùy chỉnh: Tiềm năng xoay lại trung bình"
+        Header: |-
+          Nhân vật tùy chỉnh  
+          Xoay lại trung bình
+    AllCharacters:
+      Label: Tất cả nhân vật
+      AvgPotCol:
+        Label: "Tất cả nhân vật: Tiềm năng trung bình"
+        Header: |-
+          Tất cả nhân vật
+          Tiềm năng trung bình
+      MaxPotCol:
+        Label: "Tất cả nhân vật: Tiềm năng tối đa"
+        Header: |-
+          Tất cả nhân vật
+          Tiềm năng tối đa
+      RerollAvg:
+        Label: "Tất cả nhân vật: Tiềm năng xoay lại trung bình"
+        Header: |-
+          Tất cả nhân vật  
+          Xoay lại trung bình
+    ComingSoon:
+      Label: Sắp ra mắt
+      SetsPotential:
+        Label: Bộ di vật / Vị diện tiềm năng
+        Header: |-
+          Tất cả nhân vật
+          Tiềm năng tối đa + bộ
+Toolbar:
+  RelicLocator:
+    Width: Chiều rộng Túi
+    Filter: Tự động lọc hàng
+    NoneSelected: Chọn di vật để tìm vị trí
+    Location: "Vị trí - Hàng {{rowIndex}} / Cột {{columnIndex}}"
+  InsightOptions:
+    Buckets: "Thông tin di vật: Nhóm phân loại"
+    Top10: "Thông tin di vật: Top 10"
+  PlotOptions:
+    PlotAll: Cho tất cả nhân vật
+    PlotCustom: Cho nhân vật nhất định
+  EditRelic: Chỉnh sửa di vật
+  DeleteRelic:
+    ButtonText: Xóa di vật
+    Warning_one: Xóa di vật được chọn?
+    Warning_other: "Xóa {{count}} di vật được chọn?"
+  AddRelic: Thêm di vật mới
+RelicInsights:
+  NewStats: "Thuộc tính chính mới:"
+  UpgradedStats: "Thuộc tính phụ:"

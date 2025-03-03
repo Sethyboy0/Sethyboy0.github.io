@@ -1,0 +1,14 @@
+RelicFilterBar:
+  ScoringButton: Алгоритм подсчета очков
+Messages:
+  AddRelicSuccess: Реликвия успешно добавлена
+  DeleteRelicSuccess: Реликвия успешно удалена
+RelicGrid:
+  Headers:
+    HPP: HP %
+    ATKP: АТК %
+    DEFP: ЗАЩ %
+    HP: HP
+    ATK: Сила атаки
+    DEF: Защита
+    SPD: Скорость

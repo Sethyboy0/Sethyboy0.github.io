@@ -1,0 +1,562 @@
+CharacterSelector:
+  Character: キャラクター
+  Lightcone: 光円錐
+  Presets: プリセット
+  Target: 最適化の目標
+  ResultsPlaceholder: 検索結果表示数
+  TargetPlaceholder: 並び順：
+  EidolonPlaceholder: 凸
+  SuperimpositionPlaceholder: 重
+LightconePassives: 光円錐スキル
+CharacterPassives: キャラクターのパッシブ
+NoConditionals: 条件付き追加能力なし
+NoTeamConditionals: チームへの条件付き追加能力なし
+ResultLimitN: "上位{{limit}}件を表示"
+MainStats: メインステータス
+Sets: セット
+RelicSetSelector:
+  Placeholder: 遺物セット
+  4pcLabel: 4セット
+  2+2pcLabel: 2+2セット
+  2pcLabel: 2セット+任意
+OrnamentSetSelector:
+  Placeholder: オーナメントセット
+SortOptions:
+  DMGLabel: 与ダメージ計算
+  StatLabel: ステータス
+  COMBO: コンボダメージ順
+  BASIC: 通常攻撃ダメージ順
+  SKILL: 戦闘スキルダメージ順
+  ULT: 必殺技ダメージ順
+  FUA: 追加攻撃ダメージ順
+  MEMO_SKILL: 精霊スキルダメージ順
+  MEMO_TALENT: 精霊天賦ダメージ順
+  DOT: 持続ダメージ順
+  BREAK: 弱点撃破ダメージ順
+  HEAL: 治癒量順
+  SHIELD: シールド量順
+  HP: "$t(common:ReadableStats.HP)順"
+  ATK: "$t(common:ReadableStats.ATK)順"
+  DEF: "$t(common:ReadableStats.DEF)順"
+  SPD: "$t(common:ReadableStats.SPD)順"
+  CR: "$t(common:ReadableStats.CRIT Rate)順"
+  CD: "$t(common:ReadableStats.CRIT DMG)順"
+  EHR: "$t(common:ReadableStats.Effect Hit Rate)順"
+  RES: "$t(common:ReadableStats.Effect RES)順"
+  BE: "$t(common:ReadableStats.Break Effect)順"
+  OHB: "$t(common:ReadableStats.Outgoing Healing Boost)順"
+  ERR: "$t(common:ReadableStats.Energy Regeneration Rate)順"
+  DMG: 属性ダメージ順
+  EHP: EHP順
+OptimizerOptions:
+  Header: 設定
+  PriorityFilter: 優先順位でフィルター
+  Priority:
+    Header: 優先順位
+    Label: "# {{rank}} - $t(common:Characters.{{id}}.Name)"
+    Name: "# {{rank}}"
+  AllowEquipped: 装備された遺物を含める
+  KeepCurrent: 装備済みの遺物を保持
+  Exclude: 除外
+  MinEnhance:
+    Header: 強化
+    Label0: "+0"
+    Label3: "+3"
+    Label6: "+6"
+    Label9: "+9"
+    Label12: "+12"
+    Label15: "+15"
+  MinRarity:
+    Header: レア度
+    Label2: 2 ★ +
+    Label3: 3 ★ +
+    Label4: 4 ★ +
+    Label5: 5 ★
+  BoostMain:
+    Header: メインステータスのブースト
+    Label3: "+3"
+    Label6: "+6"
+    Label9: "+9"
+    Label12: "+12"
+    Label15: "+15"
+AdvancedOptions:
+  Header: 高度な設定
+  EnemyConfigButtonText: 敵の設定
+  CombatBuffsButtonTextNone: 戦闘バフを追加
+  CombatBuffsButtonText: "戦闘バフを追加（{{activeCount}}）"
+  CustomTracesButtonText: 軌跡を編集
+Grid:
+  To: "~"
+  Of: /
+  Page: ページ
+  PageSelectorLabel: "表示件数："
+  Headers:
+    Basic:
+      Set: セット
+      ATK: 攻撃力
+      DEF: 防御力
+      HP: HP
+      SPD: 速度
+      CR: 会心率
+      CD: 会心ダメ
+      EHR: 効果命中
+      RES: 効果抵抗
+      BE: 撃破特効
+      OHB: 治癒量
+      ERR: EP回復効率
+      DMG: ダメージ
+      EHP: EHP
+      WEIGHT: |-
+        STAT
+        WEIGHT
+      HEAL: 治癒量
+      SHIELD: シールド量
+      BASIC: |-
+        通常攻撃
+      SKILL: |-
+        戦闘スキル
+      ULT: |-
+        必殺技
+      FUA: |-
+        追加攻撃
+      MEMO_SKILL: |-
+        精霊スキル
+      MEMO_TALENT: |-
+        精霊天賦
+      DOT: |-
+        持続
+      BREAK: |-
+        弱点撃破
+      COMBO: |-
+        コンボ
+        ダメージ
+    Combat:
+      Set: セット
+      ATK: Σ 攻撃力
+      DEF: Σ 防御力
+      HP: Σ HP
+      SPD: Σ 速度
+      CR: Σ 会心率
+      CD: Σ 会心ダメ
+      EHR: Σ 効果命中
+      RES: Σ 効果抵抗
+      BE: Σ 撃破特効
+      OHB: Σ 治癒量
+      ERR: Σ EP回復
+      DMG: Σ ダメージ
+      EHP: EHP
+      WEIGHT: |-
+        STAT
+        WEIGHT
+      HEAL: 回復
+      SHIELD: シールド
+      BASIC: |-
+        通常攻撃
+      SKILL: |-
+        戦闘スキル
+      ULT: |-
+        必殺技
+      FUA: |-
+        追加攻撃
+      MEMO_SKILL: |-
+        精霊スキル
+      MEMO_TALENT: |-
+        精霊天賦
+      DOT: |-
+        持続
+      BREAK: |-
+        弱点撃破
+      COMBO: |-
+        コンボ
+        ダメージ
+Sidebar:
+  GPUOptions:
+    Experimental: GPU アクセラレーション（実験的）
+    Stable: GPU アクセラレーション（安定版）
+    CPU: CPU のみ
+    EngineSwitchSuccessMsg:
+      CPU: エンジンを CPU に切り替えました
+      Stable: エンジンを GPU（安定版）に切り替えました
+      Experimental: エンジンを GPU（実験的）に切り替えました
+    Display:
+      GPU Experimental: "アクセラレーション：有効"
+      GPU Stable: "アクセラレーション：有効"
+      CPU: "アクセラレーション：無効"
+  Pinning:
+    Messages:
+      NoneSelected: 行を選択していません
+      SimSelected: カスタムシミュレーションはピン留めできません
+      AlreadyPinned: 既にピン留め済みです
+  Permutations: 組み合わせ
+  Perms: 合計
+  Searched: 検索済み
+  Results: 結果
+  ComputeEngine: 計算エンジン
+  ProgressText:
+    Progress: 進行状況
+    CalculatingETA: 進行状況（ETA計算中）
+    TimeRemaining: "{{rate}} 件/秒 — あと {{timeRemaining}}"
+    Finished: "{{rate}} 件/秒 — 完了"
+  ControlsGroup:
+    Header: 制御
+    Start: オプティマイザーを開始
+    ResetConfirm:
+      Title: すべてのフィルターを既定値に戻しますか？
+      Description: すべてのフィルターを既定値に戻します
+  StatViewGroup:
+    Header: ステータス表示の切り替え
+    CombatStats: 戦闘
+    BasicStats: 非戦闘
+    SummonerStats: 召喚者
+    MemospriteStats: 記憶の精霊
+  ResultsGroup:
+    Header: 結果
+    Equip: 装備
+    Filter: フィルター
+    Pin: ピン留め
+    Clear: ピン解除
+TeammateRow:
+  Header: "チームメイト {{teammateCount}}"
+FormRowLabels:
+  Character options: キャラクター設定
+  Relic & stat filters: 遺物とステータスのフィルター
+  Teammates: チームメイト
+  Character custom stats simulation: カスタムステータスシミュレーション
+  Analysis: 最適化結果分析
+TracesDrawer:
+  Title: 軌跡を編集
+  Header: 覚醒した軌跡（デフォルトで全て有効）
+  ButtonText: 保存
+SetConditionals:
+  Title: セット効果を編集
+  DescriptionHeader: セットの詳細
+  EffectHeader: 有効な効果
+  SetName: "$t(gameData:RelicSets.{{id}}.Name)"
+  RelicDescription: "$t(gameData:RelicSets.{{id}}.Description4pc)"
+  PlanarDescription: "$t(gameData:RelicSets.{{id}}.Description2pc)"
+  SelectOptions:
+    Streetwise:
+      Display: "{{stackCount}}層"
+      Label: "{{stackCount}}層（攻撃力+{{buffValue}}%）"
+    Wastelander:
+      Off:
+        Display: "Off"
+        Label: "Off"
+      Debuffed:
+        Display: 会心率
+        Label: デバフ状態（会心率+10%）
+      Imprisoned:
+        Display: 会心率 + 会心ダメージ
+        Label: 禁錮状態（+10%会心率｜+20%会心ダメージ）
+    Longevous:
+      Display: "{{stackCount}}層"
+      Label: "{{stackCount}}層（会心率+{{buffValue}}%）"
+    Ashblazing:
+      Display: "{{stackCount}}層"
+      Label: "{{stackCount}}層（攻撃力+{{buffValue}}%）"
+    Prisoner:
+      Display: "{{stackCount}}層"
+      Label: "{{stackCount}}層（+{{buffValue}}% 防御力無視）"
+    Diver:
+      Off:
+        Display: 0層
+        Label: デバフなし（会心率+4%）
+      1Debuff:
+        Display: 1層
+        Label: デバフ1つ（与ダメージ+12%｜会心率+4%）
+      2Debuff:
+        Display: 2層
+        Label: デバフ2つ（与ダメージ+12%｜会心率+4%｜会心ダメージ+8%）
+      3Debuff:
+        Display: 3層
+        Label: デバフ3つ（与ダメージ+12%｜会心率+4%｜会心ダメージ+12%）
+      2+Debuff:
+        Display: 2層+
+        Label: デバフ2つ、強化済み（与ダメージ+12%｜会心率+8%｜会心ダメージ+16%）
+      3+Debuff:
+        Display: 3層+
+        Label: デバフ3つ、強化済み（与ダメージ+12%｜会心率+8%｜会心ダメージ+24%）
+    Sigonia:
+      Display: "{{stackCount}}層"
+      Label: "{{stackCount}}層（会心ダメージ+{{buffValue}}%）"
+    Duran:
+      Display: "{{stackCount}}層"
+      Label: "{{stackCount}}層（追加攻撃ダメージ+{{buffValue}}%）"
+      Label5: 5層（追加攻撃ダメージ+25%｜会心ダメージ+25%）
+    Sacerdos:
+      Display: "{{stackCount}}層"
+      Label: "{{stackCount}}層（会心ダメージ+{{buffValue}}%）"
+  Conditionals:
+    DefaultMessage: デフォルトで有効 - 計算に効果が適用されます。
+    Hunter: このオプションが有効になった場合、計算に会心ダメージバフが適用されます。
+    Streetwise: 選択した攻撃力パーセンテージバフは、層数に基づいて計算に適用されます。
+    Firesmith: 戦闘スキルダメージ増加バフは常に有効になります。このオプションが有効になった場合、炎属性ダメージバフが計算に適用されます。
+    Genius: 10%の防御力無視は常に有効となります。このオプションが有効になった場合、敵は量子属性の弱点を持っているとして扱い、さらなる10%の防御力無視が計算に適用されます。
+    Thunder: このオプションが有効になった場合、計算に攻撃力パーセンテージバフが適用されます。
+    Wastelander: 計算に選択したバフを適用します。
+    Longevous: 選択した会心率バフは、層数に基づいて計算に適用されます。
+    Messenger: このオプションが有効になった場合、計算に速度パーセンテージバフが適用されます。
+    Ashblazing: >-
+      選択した攻撃力パーセンテージバフは追加攻撃を除くすべての計算に適用されます。 その代わり、追加攻撃の計算は、攻撃のヒット数に基づいて、0%の攻撃力パーセンテージバフで開始され、スタックされます。 ヒット数は敵数に基づいて増加し、また、敵ターゲットは敵集団の中央に配置されていると仮定します。
+    Prisoner: 選択した防御力無視バフは、層数に基づいて計算に適用されます。
+    Diver: 2セットバフは0層のオプションを選択することで無効化できます。4セットの場合、選択したオプションに応じて、計算に異なる会心バフが適用されます。
+    Watchmaker: このオプションが有効になった場合、計算に撃破特効バフが適用されます。
+    Valorous: 会心率バフは常に有効です。選択したバフは層数に応じて計算に適用されます。
+    Differentiator: このオプションが有効になった場合、計算に会心率バフが適用されます。
+    Sigonia: 選択した会心ダメージバフは既に指定された数の敵を倒したと想定して計算に適用されます。
+    Izumo: このオプションが有効になった場合、同じ運命をたどる味方がいると想定し、12%の会心率バフが計算に適用されます。
+    Duran: 選択したバフは、層数に基づいて計算に適用されます。
+    Kalpagni: このオプションが有効になった場合、計算に撃破特効バフが適用されます。
+    Lushaka: 選択したバフは計算に適用されます。
+    Banana: 選択したバフは計算に適用されます。
+    Sacerdos: 選択されたバフは計算に適用されます。自身をバフするキャラクターはこの効果を発揮できます。
+Presets:
+  SpdValues:
+    SPD0: 速度の指定なし
+    SPD111: 111.112 速度 - 最初の4ラウンドで5回のアクション
+    SPD114: 114.286 速度 - 最初の3ラウンドで4回のアクション
+    SPD120: 120.000 速度 - 最初の2ラウンドで3回のアクション
+    SPD133: 133.334 速度 - 最初のラウンドで2回、最初の4ラウンドで6回のアクション
+    SPD142: 152.858 速度 - 最初の3ラウンドで5回のアクション
+    SPD155: 155.556 速度 - 最初の4ラウンドで7回のアクション
+    SPD160: 160.000 速度 - 最初の2ラウンドで4回のアクション
+    SPD171: 171.429 速度 - 最初の3ラウンドで6回のアクション
+    SPD177: 177.778 速度 - 最初の4ラウンドで8回のアクション
+    SPD200: 200.000 速度 - 最初のラウンドで3回のアクション
+  StandardLabel: "標準$t(gameData:Characters.{{id}}.Name)"
+  RecommendedPresets: おすすめプリセット
+  PresetNotAvailable: プリセットは利用できません。別のオプションを選択してください。
+CombatBuffs:
+  ATK: 攻撃力
+  ATK_P: 攻撃力割合
+  HP: HP
+  HP_P: HP割合
+  DEF: 防御力
+  DEF_P: 防御力割合
+  CR: 会心率
+  CD: 会心ダメージ
+  SPD: 速度
+  SPD_P: 速度割合
+  BE: 撃破特効
+  DMG_BOOST: 与ダメージ増加
+  DEF_PEN: 防御力無視
+  RES_PEN: ダメージ貫通
+  EFFECT_RES_PEN: 属性耐性貫通
+  VULNERABILITY: ダメージ貫通
+  BREAK_EFFICIENCY: 弱点撃破効率
+  Title: 戦闘バフを追加
+Target_one: ターゲット
+Target_other: ターゲット
+EnemyConfiguration:
+  LevelOptionLabel: "レベル{{level}} - 防御力{{defense}}"
+  CountOptionLabel: >-
+    {{targetCount}}$t(optimizerTab:Target, {"count": {{targetCount}}})
+  EffResOptionLabel: "効果抵抗 {{resistance}}%"
+  DmgResOptionLabel: "ダメージ耐性 {{resistance}}%"
+  ToughnessOptionLabel: "最大靭性値 {{toughness}}"
+  Title: 敵の設定
+  StatHeader: 敵の設定
+  WeaknessLabel: 弱点属性
+  BrokenLabel: 弱点撃破済み
+WeightFilter:
+  WeightFilterHeader: 重み付けフィルター
+  RollFilterHeader: 遺物当たりの重み付きサブステ数
+  HPFilterText: HP
+  ATKFilterText: 攻撃力
+  DEFFilterText: 防御力
+  SPDFilterText: 速度
+  CRFilterText: 会心率
+  CDFilterText: 会心ダメ
+  EHRFilterText: 効果命中
+  RESFilterText: 効果抵抗
+  BEFilterText: 撃破特効
+MinMaxFilters:
+  StatHeader: ステータスフィルター
+  RatingHeader: レーティングフィルター
+  HPLabel: HP
+  ATKLabel: 攻撃力
+  DEFLabel: 防御力
+  SPDLabel: 速度
+  CRLabel: 会心率
+  CDLabel: 会心ダメ
+  EHRLabel: 効果命中
+  RESLabel: 効果抵抗
+  BELabel: 撃破特効
+  ERRLabel: EP回復効率
+  WEIGHTLabel: 重み
+  EHPLabel: EHP
+  BASICLabel: 通常攻撃
+  SKILLLabel: 戦闘スキル
+  ULTLabel: 必殺技
+  FUALabel: 追加攻撃
+  MEMOSKILLLabel: 精霊スキル
+  DOTLabel: 持続
+  BREAKLabel: 撃破
+  HEALLabel: 治癒量
+  SHIELDLabel: シールド量
+  COMBOLabel: コンボ
+ComboFilter:
+  Header: コンボダメージの編集
+  AbilityLabel: アビリティ
+  ModeSelector:
+    Simple: シンプル
+    Advanced: 高度
+  RowControls:
+    Add: +
+    Remove: "-"
+    ResetConfirm:
+      Description: すべてのシンプル・高度なスキル回しの設定をデフォルトに戻しますか？
+  CounterLabels:
+    Dot: 持続
+    Break: 撃破
+  ComboOptions:
+    Basic: 基礎
+    Skill: スキル
+    Ult: 必殺
+    Fua: 追加
+    MemoSkill: 精霊スキル
+    MemoTalent: 精霊天賦
+  RotationButton: 高度なスキル回しの設定
+ComboDrawer:
+  NoConditionals: 条件付き追加能力なし
+  Title: ガイド
+  Placeholders:
+    Sets: 遺物セットのバフ
+    Ornaments: オーナメントセットのバフ
+  GroupHeaders:
+    Sets: 遺物・オーナメントセットのバフ
+    Teammate1: チームメイト 1
+    Teammate2: チームメイト 2
+    Teammate3: チームメイト 3
+TeammateCard:
+  EidolonN: >-
+    $t(common:EidolonNShort, {"eidollon": {{eidolon}}})
+  SuperimpositionN: >-
+    $t(common:SuperimpositionNShort, {"superimposition": {{superimposition}}})
+  EidolonPlaceholder: 星魂
+  SuperimpositionPlaceholder: 重畳
+  RelicsPlaceholder: 遺物
+  OrnamentsPlaceholder: オーナメント
+  TeammateSyncSuccessMessage: チームメイトを同期しました
+  TeammateSets:
+    Messenger:
+      Desc: "4セット：$t(gameData:RelicSets.114.Name)（速度+12%）"
+      Set: "$t(gameData:RelicSets.114.Name)"
+      Text: 速度12%
+    Watchmaker:
+      Desc: "4セット：$t(gameData:RelicSets.118.Name)（撃破特効+30%）"
+      Set: "$t(gameData:RelicSets.118.Name)"
+      Text: 撃破30%
+    Sacerdos1Stack:
+      Desc: "4セット：$t(gameData:RelicSets.121.Name)（会心ダメージ+18%）"
+      Set: "$t(gameData:RelicSets.121.Name)"
+      Text: 会心ダメ18%
+    Sacerdos2Stack:
+      Desc: "4セット：$t(gameData:RelicSets.121.Name)（会心ダメージ+36%）"
+      Set: "$t(gameData:RelicSets.121.Name)"
+      Text: 会心ダメ36%
+    Keel:
+      Desc: "$t(gameData:RelicSets.310.Name) （会心ダメージ+10%）"
+      Set: "$t(gameData:RelicSets.310.Name)"
+      Text: 会心ダメ10%
+    Ageless:
+      Desc: "$t(gameData:RelicSets.302.Name) （攻撃力+8%）"
+      Set: "$t(gameData:RelicSets.302.Name)"
+      Text: 攻撃力8%
+    Penacony:
+      Desc: "$t(gameData:RelicSets.312.Name)（同属性に+10%与ダメージ）"
+      Set: "$t(gameData:RelicSets.312.Name)"
+      Text: 与ダメ10%
+    Lushaka:
+      Desc: "$t(gameData:RelicSets.317.Name) （攻撃力+12%）"
+      Set: "$t(gameData:RelicSets.317.Name)"
+      Text: 攻撃力12%
+StatSimulation:
+  DuplicateSimMessage: 同一のシミュレーションが既に存在します
+  MissingMainstatsMessage: メインステータスを入力する必要があります
+  BuildAlreadyImported: 選択したビルドは既にシミュレーションされたものです
+  NothingToImport: まずオプティマイザーを実行し、その後、オプティマイザーの結果から行を選択してインポートしてください。
+  NoStatSimulations: カスタムステータスシミュレーションが選択されていません
+  SetSelection:
+    Header: セット
+    RelicPlaceholder: 遺物セット
+    OrnamentPlaceholder: オーナメントセット
+  TotalRolls: 合計
+  SubstatSelectorLabel: "$t(common:Stats.{{stat}})"
+  ModeSelector:
+    Off: "無効"
+    RollCount: サブステータス強化数でシュミレート
+    Totals: サブステータスの値でシュミレート
+  FooterLabels:
+    Simulate: ビルドをシュミレート
+    Import: グリッドからインポート
+    Conditionals: セット効果を編集
+  DeletePopup:
+    Title: ステータスシミュレーションを削除
+    Description: 本当にこのキャラクターのすべてのシミュレーションを削除しますか？
+  SimulationNamePlaceholder: シミュレーション名（任意）
+  OptionsHeader: オプション
+  RollsHeader: 最大サブステータス強化数
+  TotalsHeader: サブステータス合計
+  MainStatsSelection:
+    Header: メインステータス
+    BodyPlaceholder: 胴体
+    FeetPlaceholder: 脚部
+    SpherePlaceholder: オーブ
+    RopePlaceholder: 縄
+    ShortStat: "$t(common:ShortReadableStats.{{stat}})"
+    LabelStat: "$t(common:ReadableStats.{{stat}})"
+ExpandedDataPanel:
+  BuffsAnalysisDisplay:
+    Sources:
+      Basic: 通常
+      Skill: スキル
+      Ult: 必殺
+      Talent: 天賦
+      Technique: 秘技
+      Trace: 軌跡
+      Memo: 精霊
+      E1: 1凸
+      E2: 2凸
+      E4: 4凸
+      E6: 6凸
+  SubstatUpgrades:
+    ColumnHeaders:
+      Substat: '+1x サブステ'
+      COMBO_DMG: コンボダメ変化量
+      COMBO_DMG_P: コンボダメ変化率
+      EHP: EHP変化量
+      EHP_P: EHP変化率
+      HEAL_VALUE: 治癒量変化量
+      HEAL_VALUE_P: 治癒量変化率
+      SHIELD_VALUE: シールド量変化量
+      SHIELD_VALUE_P: シールド量変化率
+  DamageSplits:
+    Title: ダメージ種類別分布
+    Legend:
+      abilityDmg: アビリティ
+      breakDmg: 撃破
+      superBreakDmg: 超撃破
+      additionalDmg: 付加
+      trueDmg: '確定'
+      jointDmg: 連携
+      dotDmg: 持続
+      memoDmg: 精霊
+    YAxisLabel:
+      BASIC_DMG: 通常
+      SKILL_DMG: スキル
+      ULT_DMG: 必殺
+      FUA_DMG: 追加
+      DOT_DMG: 持続
+      BREAK_DMG: 撃破
+      MEMO_SKILL_DMG: 精霊スキル
+      MEMO_TALENT_DMG: 精霊天賦
+    TooltipText:
+      abilityDmg: アビリティダメージ
+      breakDmg: 撃破ダメージ
+      superBreakDmg: 超撃破ダメージ
+      additionalDmg: 付加ダメージ
+      trueDmg: 確定ダメージ
+      jointDmg: 連携ダメージ
+      dotDmg: 持続ダメージ
+      memoDmg: 精霊ダメージ
