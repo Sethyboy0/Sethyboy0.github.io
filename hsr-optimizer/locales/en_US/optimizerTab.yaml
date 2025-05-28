@@ -74,6 +74,7 @@ OptimizerOptions:
     Label5: 5 ★
   BoostMain:
     Header: Boost main stat
+    Label0: "+0"
     Label3: "+3"
     Label6: "+6"
     Label9: "+9"
@@ -318,16 +319,18 @@ SetConditionals:
     Prisoner: The selected DEF% pen buff is applied to damage calculations based on the number of stacks.
     Diver: The 2 piece effect can be disabled by selecting the 0x option. For 4 piece, different CRIT buffs are applied to Combat stat calculations depending on the selected option.
     Watchmaker: When enabled, the Break Effect buff is applied to Combat stat calculations.
-    Valorous: The CRIT Rate buff is always on by default. The selected buff is applied to damage calculations based on the number of stacks.
+    Valorous: When enabled, the DMG% buff for Ultimate damage is applied to Combat stat calculations.
+    Sacerdos: The selected buff is applied to damage calculations. Characters who buff themselves can trigger this effect.
+    Scholar: When enabled, the DMG% buff for Skill damage will be enhanced in accordance with the character's COMBO sequence.
+    Hero: When enabled, the SPD% and CRIT Damage buffs are applied to combat stat calculations.
     Differentiator: When enabled, the CRIT Rate buff is applied to Combat stat calculations.
     Penacony: When enabled, the DMG% buff will apply to the wearer's memosprite.
     Sigonia: The selected CRIT DMG buff is applied to Combat stat calculations, assuming the character has defeated that number of enemies.
     Izumo: When enabled, if there is an ally with the same path, applies the 12% CRIT Rate buff to Combat stat calculations.
     Duran: The selected buff is applied to damage calculations based on the number of stacks.
     Kalpagni: When enabled, applies the Break Effect buff to combat stat calculations.
-    Lushaka: The selected buff is applied to damage calculations.
+    Lushaka: Disabled by default - This set is unable to affect its wearer.
     Banana: The selected buff is applied to damage calculations.
-    Sacerdos: The selected buff is applied to damage calculations. Characters who buff themselves can trigger this effect.
 Presets:
   SpdValues:
     SPD0: No minimum speed
@@ -426,12 +429,14 @@ ComboFilter:
       Description: Reset all Simple / Advanced rotation settings to default?
   CounterLabels:
     Dot: Dots
-    Break: Breaks
   ComboOptions:
+    None: 'None'
     Basic: Basic
     Skill: Skill
     Ult: Ult
     Fua: Fua
+    Dot: Dot
+    Break: Break
     MemoSkill: Skillᴹ
     MemoTalent: Talentᴹ
   RotationButton: Advanced rotation
@@ -473,6 +478,10 @@ TeammateCard:
       Desc: "4 Piece: $t(gameData:RelicSets.121.Name) (+36% CD)"
       Set: "$t(gameData:RelicSets.121.Name)"
       Text: 36% CD
+    Warrior:
+      Desc: "$t(gameData:RelicSets.125.Name) (+15% CD)"
+      Set: "$t(gameData:RelicSets.125.Name)"
+      Text: 15% CD
     Keel:
       Desc: "$t(gameData:RelicSets.310.Name) (+10% CD)"
       Set: "$t(gameData:RelicSets.310.Name)"
@@ -525,19 +534,6 @@ StatSimulation:
     ShortStat: "$t(common:ShortReadableStats.{{stat}})"
     LabelStat: "$t(common:ReadableStats.{{stat}})"
 ExpandedDataPanel:
-  BuffsAnalysisDisplay:
-    Sources:
-      Basic: Basic
-      Skill: Skill
-      Ult: Ult
-      Talent: Talent
-      Technique: Technique
-      Trace: Trace
-      Memo: Memo
-      E1: E1
-      E2: E2
-      E4: E4
-      E6: E6
   SubstatUpgrades:
     ColumnHeaders:
       Substat: '+1x Substat'
@@ -578,3 +574,108 @@ ExpandedDataPanel:
       jointDmg: Joint DMG
       dotDmg: Dot DMG
       memoDmg: Memo DMG
+  BuffsAnalysisDisplay:
+    Values:
+      BoolFalse: "No"
+      BoolTrue: "Yes"
+    Sources:
+      Basic: Basic
+      Skill: Skill
+      Ult: Ult
+      Talent: Talent
+      Technique: Technique
+      Trace: Trace
+      Memo: Memo
+      E1: E1
+      E2: E2
+      E4: E4
+      E6: E6
+    Stats:
+      CompositeLabels:
+        Label: "{{prefix}} {{suffix}}"
+        Prefix:
+          Basic: Basic
+          Skill: Skill
+          Ult: Ult
+          Fua: Fua
+          Dot: Dot
+          Break: Break
+          Memo Skill: Memo Skill
+          Memo Talent: Memo Talent
+        Suffix:
+          ATK scaling: ATK scaling
+          DEF scaling: DEF scaling
+          HP scaling: HP scaling
+          Special scaling: Special scaling
+          ATK % boost: ATK % boost
+          Crit Rate boost: Crit Rate boost
+          Crit DMG boost: Crit DMG boost
+          DMG boost: DMG boost
+          Vulnerability: Vulnerability
+          RES PEN: RES PEN
+          DEF PEN: DEF PEN
+          Break DEF PEN: Break DEF PEN
+          Toughness DMG: Toughness DMG
+          Super Break multiplier: Super Break multiplier
+          Break Efficiency boost: Break Efficiency boost
+          True DMG multiplier: True DMG multiplier
+          Final DMG multiplier: Final DMG multiplier
+          Break DMG multiplier: Break DMG multiplier
+          Additional DMG scaling: Additional DMG scaling
+          Additional DMG: Additional DMG
+          DMG: DMG
+      Misc:
+        Base HP: Base HP
+        Base ATK: Base ATK
+        Base DEF: Base DEF
+        Base SPD: Base SPD
+        Memosprite base HP scaling: Memosprite base HP scaling
+        Memosprite base DEF scaling: Memosprite base DEF scaling
+        Memosprite base ATK scaling: Memosprite base ATK scaling
+        Memosprite base SPD scaling: Memosprite base SPD scaling
+        Memosprite base HP flat: Memosprite base HP flat
+        Memosprite base DEF flat: Memosprite base DEF flat
+        Memosprite base ATK flat: Memosprite base ATK flat
+        Memosprite base SPD flat: Memosprite base SPD flat
+        Elemental DMG: Elemental DMG
+        DMG reduction: DMG reduction
+        Effective HP: Effective HP
+        Summons: Summons
+        Memosprite: Memosprite
+        Enemy weakness broken: Enemy weakness broken
+        Prioritize memosprite buffs: Prioritize memosprite buffs
+        Deprioritize buffs: Deprioritize buffs
+        Combo DMG: Combo DMG
+        Dot base chance: Dot base chance
+        Effect RES PEN: Effect RES PEN
+        Dot DMG split: Dot DMG split
+        Dot stacks: Dot stacks
+        Heal ability type: Heal ability type
+        Heal flat: Heal flat
+        Heal scaling: Heal scaling
+        Heal value: Heal value
+        Shield flat: Shield flat
+        Shield scaling: Shield scaling
+        Shield value: Shield value
+        Shield boost: Shield boost
+        Skill Outgoing Healing Boost: Skill Outgoing Healing Boost
+        Ult Outgoing Healing Boost: Ult Outgoing Healing Boost
+        Super Break DEF PEN: Super Break DEF PEN
+        Super Break DMG Boost: Super Break DMG Boost
+        Super Break Vulnerability: Super Break Vulnerability
+        Additional DMG boost: Additional DMG boost
+        Ult Additional DMG CR override: Ult Additional DMG CR override
+        Ult Additional DMG CD override: Ult Additional DMG CD override
+      DmgTypes:
+        Basic: Basic DMG type
+        Skill: Skill DMG type
+        Ult: Ult DMG type
+        Fua: Fua DMG type
+        Dot: Dot DMG type
+        Break: Break DMG type
+        MemoSkill: Memo Skill DMG type
+        MemoTalent: Memo Talent DMG type
+        Additional: Additional DMG type
+        SuperBreak: Super Break DMG type
+      ResPen: "$t(common:Elements.{{element}}) RES PEN"
+      Unconvertible: "Unconvertible  $t(common:Stats.{{stat}})"

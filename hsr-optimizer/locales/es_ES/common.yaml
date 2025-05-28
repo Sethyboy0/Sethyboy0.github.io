@@ -1,16 +1,12 @@
 Relic_one: artefacto
 Relic_other: artefactos
-RelicWithCount_one: "{{count}} Artefactos"
-DecimalSeparator: "."
-ThousandsSeparator: ","
 I18nNumber: "{{value, number}}"
 Cancel: Cancelar
 Confirm: Confirmar
-Score: Puntuación
 EidolonNShort: "E{{eidolon}}"
 SuperimpositionNShort: "S{{superimposition}}"
 LevelShort: "Niv{{level}}"
-CombatStats: Estadísticas de combate
+CombatStats: Atributos de combate
 Parts:
   Head: Cabeza
   Hands: Manos
@@ -41,13 +37,6 @@ Stats:
   Break Effect: Efecto de Ruptura
   Energy Regeneration Rate: Recuperación de energía
   Outgoing Healing Boost: Bonif. curación realizada
-  Physical DMG Boost: "Aumento de Daño $t(gameData:Elements.Physical)"
-  Fire DMG Boost: "Aumento de Daño $t(gameData:Elements.Fire)"
-  Ice DMG Boost: "Aumento de Daño $t(gameData:Elements.Ice)"
-  Lightning DMG Boost: "Aumento de Daño $t(gameData:Elements.Thunder) "
-  Wind DMG Boost: "Aumento de Daño $t(gameData:Elements.wind)"
-  Quantum DMG Boost: "Aumento de Daño $t(gameData:Elements.Quantum)"
-  Imaginary DMG Boost: "Aumento de Daño $t(gameData:Elements.Imaginary)"
 ShortStats:
   "HP%": PV%
   HP: PV
@@ -108,8 +97,7 @@ ReadableStats:
   Effect Hit Rate: Acierto de efecto
   Effect RES: RES a efecto
   Break Effect: Efecto de Ruptura
-  Energy Regeneration Rate: Recuperación de energía
-  Outgoing Healing Boost: Bono de curación
+  Energy Regeneration Rate: Rec. de energía
   Physical DMG Boost: "Daño $t(gameData:Elements.Physical)"
   Fire DMG Boost: "Daño $t(gameData:Elements.Fire)"
   Ice DMG Boost: "Daño $t(gameData:Elements.Ice)"
@@ -140,11 +128,13 @@ ShortReadableStats:
   Wind DMG Boost: "$t(gameData:Elements.Wind)"
   Quantum DMG Boost: "$t(gameData:Elements.Quantum)"
   Imaginary DMG Boost: "$t(gameData:Elements.Imaginary)"
+Elements:
+  Physical: "$t(gameData:Elements.Physical)"
+  Fire: "$t(gameData:Elements.Fire)"
+  Ice: "$t(gameData:Elements.Ice)"
+  Lightning: "$t(gameData:Elements.Thunder)"
+  Wind: "$t(gameData:Elements.Wind)"
+  Quantum: "$t(gameData:Elements.Quantum)"
+  Imaginary: "$t(gameData:Elements.Imaginary)"
 DMGTypes:
-  simScore: Combo de Daño
-  BASIC: Daño de Básico
-  SKILL: Daño de Habilidad
-  ULT: Daño de Definitiva
-  CV: CV
-ShortDMGTypes:
-  CV: CV
+  simScore: Daño de combo

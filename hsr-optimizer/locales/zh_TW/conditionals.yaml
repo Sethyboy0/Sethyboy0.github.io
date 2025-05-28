@@ -31,9 +31,8 @@ Lightcones:
           當裝備者擊中敵方目標時，使敵方陷入【泡影】狀態，持續1回合。裝備者每次攻擊時，對每個目標只可觸發1次。裝備者對陷入【泡影】狀態的目標造成的傷害提高{{DmgBoost}}%，終結技造成的傷害額外提高{{UltDmgBoost}}%。
   AnInstantBeforeAGaze:
     Content:
-      maxEnergyUltDmgStacks:
-        text: 最大能量
-        content: 當裝備者施放終結技時，根據裝備者的能量上限，提高裝備者終結技造成的傷害：每點能量提高{{DmgStep}}%，最多計入180點。
+      maxEnergyDmgBoost:
+        text: 滿能量傷害提高
   BaptismOfPureThought:
     Content:
       debuffCdStacks:
@@ -124,6 +123,10 @@ Lightcones:
     Content:
       luminfluxUltStacks:
         text: 流光層數
+  LifeShouldBeCastToFlames:
+    Content:
+      dmgBoost:
+        text: 傷害提高
   LongRoadLeadsHome:
     Content:
       breakVulnerabilityStacks:
@@ -530,6 +533,12 @@ Characters:
     Content:
       e6Buffs:
         text: 6魂增益
+  Anaxa:
+    Content:
+      e1DefPen:
+        text: 1魂防禦穿透
+      e6Buffs:
+        text: 6魂增益
   Argenti:
     Content:
       ultEnhanced:
@@ -664,6 +673,16 @@ Characters:
       teammateCDValue:
         text: 布洛妮亞戰鬥中的暴擊傷害
         content: 使我方全體攻擊力提高{{ultAtkBoostValue}}%，同時提高等同於布洛妮亞{{ultCdBoostValue}}%暴擊傷害+{{ultCdBoostBaseValue}}%的暴擊傷害，持續2回合。
+  Castorice:
+    Content:
+      spdBuff:
+        text: 速度增益
+      e6Buffs:
+        text: 6魂增益
+  Cipher:
+    Content:
+      skillAtkBuff:
+        text: 戰技攻擊力增益
   Clara:
     Content:
       ultBuff:
