@@ -63,7 +63,7 @@ OptimizerOptions:
   PriorityFilter: 優先順位でフィルター
   Priority:
     Header: 優先順位
-    Label: '# {{rank}} - $t(common:Characters.{{id}}.Name)'
+    Label: '# {{rank}} - $t(common:Characters.{{id}}.LongName)'
     Name: '# {{rank}}'
   AllowEquipped: 別キャラの遺物を含める
   KeepCurrent: 装備済みの遺物を保持
@@ -320,7 +320,7 @@ SetConditionals:
     Scholar: 有効にすると、キャラクターのコンボの順序に応じて戦闘スキルダメージバフが強化されます。
     Hero: 有効にすると、会心ダメージバフと速度バフを戦闘ステータス計算に反映します。
     Differentiator: 有効にすると、会心率バフを戦闘ステータス計算に反映します。
-    Penacony: 有効にすると、与ダメージバフを装備者の召喚した精霊に反映します。
+    Penacony: 有効にすると、与ダメージバフを装備キャラが召喚した精霊に反映します。
     Sigonia: 選択した会心ダメージバフを既に指定した数の敵を倒したと想定し戦闘ステータス計算に反映します。
     Izumo: 有効にすると、同じ運命をたどる味方がいるとき、12%の会心率バフを戦闘ステータス計算に反映します。
     Duran: 選択したバフをダメージ計算に反映します。
@@ -478,8 +478,16 @@ TeammateCard:
       Set: '$t(gameData:RelicSets.121.Name)'
       Text: 会心ダメ36%
     Warrior:
-      Desc: '$t(gameData:RelicSets.125.Name) （会心ダメージ+15%）'
+      Desc: '4セット：$t(gameData:RelicSets.125.Name)（会心ダメージ+15%）'
       Set: '$t(gameData:RelicSets.125.Name)'
+      Text: 会心ダメ15%
+    WorldRemaking:
+      Desc: '4セット：$t(gameData:RelicSets.127.Name)（与ダメージ+15%）'
+      Set: '$t(gameData:RelicSets.127.Name)'
+      Text: 与ダメ+15%
+    SelfEnshrouded:
+      Desc: '4セット：$t(gameData:RelicSets.128.Name)（会心ダメージ+15%）'
+      Set: '$t(gameData:RelicSets.128.Name)'
       Text: 会心ダメ15%
     Keel:
       Desc: '$t(gameData:RelicSets.310.Name) （会心ダメージ+10%）'
@@ -497,6 +505,10 @@ TeammateCard:
       Desc: '$t(gameData:RelicSets.317.Name) （攻撃力+12%）'
       Set: '$t(gameData:RelicSets.317.Name)'
       Text: 攻撃力12%
+    Amphoreus:
+      Desc: '$t(gameData:RelicSets.323.Name) (速度+8%)'
+      Set: '$t(gameData:RelicSets.323.Name)'
+      Text: 速度8%
 StatSimulation:
   DuplicateSimMessage: 同一のシミュレーションが既に存在します
   MissingMainstatsMessage: メインステータスを入力してください
@@ -615,6 +627,7 @@ ExpandedDataPanel:
           DEF PEN: 防御力無視
           Break DEF PEN: 撃破後防御力無視
           Toughness DMG: 削靭値
+          Fixed Toughness DMG: 固定削靭値
           Super Break multiplier: 超撃破倍率
           Break Efficiency boost: 弱点撃破効率増加
           True DMG multiplier: 確定ダメージ倍率

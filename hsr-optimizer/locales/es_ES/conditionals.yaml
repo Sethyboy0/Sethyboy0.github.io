@@ -103,6 +103,7 @@ Lightcones:
     Content:
       skillDmgBoost:
         text: Aumento de daño de Habilidad
+        content: Después de que el portador lance la habilidad básica sobre un personaje aliado, el daño de habilidad básica infligido por el objetivo aumenta en un {{DmgBuff}}% durante 3 turnos.
   EternalCalculus:
     Content:
       atkBuffStacks:
@@ -154,7 +155,7 @@ Lightcones:
         text: Aumento de daño por enemigo afectado
         content: El portador inflige un {{DmgBuff}}% más de daño a los enemigos afectados por estados negativos.
       skillAtkBoost:
-        text: Mejora de ATQ para Habilidad (sin implementar)
+        text: Aumento ATQ habilidad
         content: Cuando el portador usa su habilidad básica, su acierto de efecto en ese ataque aumenta en un {{EhrBuff}}% y su ATQ en un {{AtkBuff}}%.
   InTheNight:
     Content:
@@ -227,6 +228,10 @@ Lightcones:
       selfAttackedDefBuff:
         text: Mejora de DEF por ser atacado
         content: Incrementa la probabilidad de recibir ataques enemigos. Cuando el portador recibe un ataque, su DEF aumenta en un {{DefBuff}}% adicional hasta el final de su turno.
+  NeverForgetHerFlame:
+    Content:
+      breakDmgBuff:
+        text: Aumento de Daño de Ruptura
   NightOfFright:
     Content:
       atkBuffStacks:
@@ -337,6 +342,11 @@ Lightcones:
         text: Vulnerabilidad Arrinconado
         content: >-
           Después de que el portador ataque al enemigo con su ATQ básico, habilidad básica o habilidad definitiva, tiene una probabilidad base del 60% de afectar al enemigo con Sin armadura. En el estado de Sin armadura, el daño que recibe el enemigo aumenta en un {{UnarmoredVulnerability}}% durante 2 turnos. Si el objetivo está afectado por un estado de Daño con el tiempo aplicado por el portador, hay una probabilidad base del 60% de mejorar el estado de Sin armadura aplicado por el portador al estado de Arrinconado, lo que aumenta el daño que recibe el enemigo en un {{CorneredVulnerability}}% adicional durante 2 turnos.
+  ThoughWorldsApart:
+    Content:
+      dmgBoost:
+        text: Aumento de daño
+        content: Cuando el portador lanza la habilidad definitiva, otorga Baluarte a todos los aliados durante 3 turnos. El daño que infligen los objetivos con Baluarte aumenta en un {{DmgBuff}}% y, si tienen alguna invocación, aumenta en un {{SummonDmgBuff}}% adicional.
   ThusBurnsTheDawn:
     Content:
       defPen:
@@ -345,6 +355,14 @@ Lightcones:
       dmgBuff:
         text: Mejora de daño
         content: Cuando tiene Sol abrasador, el daño que inflige el portador aumenta en un {{DmgBuff}}%.
+  ToEvernightsStars:
+    Content:
+      defPen:
+        text: PEN DEF mnemo
+        content: Cuando el mnemoduende del portador lanza una habilidad, el portador obtiene Escena nocturna. Cuando el portador tiene Escena nocturna, el daño que infligen todos los mnemoduendes aliados ignora el {{MemoDefPen}}% de la DEF de los objetivos.
+      dmgBoost:
+        text: Aumento de daño
+        content: El daño que infligen el portador y su mnemoduende aumenta en un {{DmgBuff}}%.
   TimeWaitsForNoOne:
     Content:
       healingBasedDmgProc:
@@ -369,8 +387,12 @@ Lightcones:
           Cuando el portador inflige Daño de Ruptura a un enemigo, este entra en el estado de Vencido durante 2 turnos. Los objetivos afectados con Vencido reciben un {{Vulnerability}}% más de Daño de Ruptura del portador y su VEL se reduce en un 20%. Los efectos del mismo tipo no se pueden acumular.
   WhyDoesTheOceanSing:
     Content:
+      dotVulnStacks:
+        text: Acumulaciones de vulnerabilidad DoT
+        content: Cuando el portador aplica un estado negativo a un enemigo, tiene una probabilidad base del 80% de afectarlo con Hechizo durante 3 turnos. En el estado de Hechizo, el Daño con el tiempo recibido aumenta en un {{DotVuln}}% por cada estado negativo aplicado por el portador. Este efecto se puede acumular hasta 6 veces.
       spdBuff:
         text: Mejora de VEL
+        content: Cuando el portador aplica un estado negativo a un enemigo, tiene una probabilidad base del 80% de afectarlo con Hechizo durante 3 turnos. Cuando el objetivo recibe un ataque de un aliado, la VEL del atacante aumenta en un {{SpdBuff}}% durante 3 turnos.
   WorrisomeBlissful:
     Content:
       targetTameStacks:
@@ -465,6 +487,14 @@ Lightcones:
         text: Mejora de daño
         content: >-
           Cuando los PV que pierde el portador durante un único ataque superan el 25% de sus PV máx., o si los PV que consume de una sola vez superan el 25% de sus PV máx., el portador regenera inmediatamente un 15% de sus PV máx. y el daño que inflige aumenta en un {{DmgBuff}}% durante 2 turnos. Este efecto solo se puede activar una vez cada 3 turnos.
+  FlyIntoAPinkTomorrow:
+    Content:
+      dmgBoost:
+        text: Aumento de daño
+        content: El daño que infligen todos los aliados aumenta en un {{DmgBuff}}%.
+      enhancedBasicBoost:
+        text: Básico potenciado de la/el Trazacaminos
+        content: El daño que inflige el ATQ básico potenciado “¡Escribamos el mañana!” aumenta en un {{DmgBoost}}%.
   ForTomorrowsJourney:
     Content:
       ultDmgBuff:
@@ -617,6 +647,7 @@ Lightcones:
     Content:
       atkStacks:
         text: Acumulaciones mejora de ATQ
+        content: Tras lanzar su habilidad básica, el ATQ del portador aumenta en un {{AtkBuff}}%. Este efecto se puede acumular hasta 3 veces.
   TheGreatCosmicEnterprise:
     Content:
       weaknessTypes:
@@ -646,6 +677,14 @@ Lightcones:
         text: Daño de Definitiva aumentado por DEF (sin implementar)
         content: >-
           Cuando el portador usa la habilidad definitiva, el daño que inflige aumenta en una cantidad equivalente al {{Multiplier}}% de su DEF. Este efecto solo se activa una vez con cada enemigo por cada vez que se utilice la habilidad definitiva.
+  ThisLoveForever:
+    Content:
+      vulnerability:
+        text: Vulnerabilidad
+        content: Cuando el mnemoduende del portador lanza la habilidad de mnemoduende sobre un aliado, obtiene Espacio en blanco, que aumenta el daño que reciben todos los enemigos en un {{Vulnerability}}%. Si el mnemoduende del portador tiene simultáneamente Espacio en blanco y Verso, los efectos de ambos aumentan en un {{Multi}}%.
+      cdBoost:
+        text: Mejora de DC
+        content: Cuando el mnemoduende del portador lanza la habilidad de mnemoduende sobre enemigos, obtiene Verso, que aumenta el Daño CRIT de todos los aliados en un {{CdBuff}}%. Si el mnemoduende del portador tiene simultáneamente Espacio en blanco y Verso, los efectos de ambos aumentan en un {{Multi}}%.
   TodayIsAnotherPeacefulDay:
     Content:
       maxEnergyDmgBoost:
@@ -804,6 +843,9 @@ Characters:
         text: Acumulaciones de VEL mnemo
         content: >-
           Tras atacar a un enemigo en el estado de Hilván, su VEL aumenta en {{SpdBuff}} pts. Este efecto puede acumularse hasta {{StackLimit}} veces.
+      cyreneSpecialEffect:
+        text: Efecto especial de Cirene
+        content: El daño que infligen Aglaea y el Sastre aumenta en un 72%/79.2% e ignora el 36%/39.6% de la DEF del objetivo hasta que Aglaea salga del estado de Disposición suprema.
       e1Vulnerability:
         text: E1 Vulnerabilidad
         content: El daño que recibe el enemigo afectado con Hilván aumenta en un 15%.
@@ -831,6 +873,10 @@ Characters:
       enemyWeaknessTypes:
         text: Debilidades del enemigo
         content: Por cada Debilidad de un tipo distinto que tenga un enemigo, el daño que inflige Anaxa a ese objetivo ignora un 4% de su DEF. Se cuentan como máximo 7 tipos de Debilidad.
+      cyreneSpecialEffect:
+        text: Efecto especial de Cirene
+        content: >-
+          La habilidad básica inflige daño 3 veces más durante 1 turno. ::BR:: La siguiente vez que Anaxa lanza el ATQ básico o la habilidad básica, obtiene Sabiduría verdadera, con lo que el ATQ y el daño de habilidad básica infligido de todos los personajes de la Vía de la Erudición aumentan en un 60%/66% y un 40%/44% respectivamente hasta que comience el siguiente turno de Anaxa.
       e1DefPen:
         text: E1 PEN DEF
         content: Cuando golpea a un enemigo con la habilidad básica, reduce la DEF del objetivo en un 16% durante 2 turnos.
@@ -1010,7 +1056,7 @@ Characters:
         content: >-
           Cuando está en el estado de Duelo a muerte y obtiene Ventaja en el bolsillo, recupera 1 pt. de habilidad básica y aumenta su efecto de Ruptura en un 30% durante 2 turnos. Este efecto no se puede activar repetidamente en el mismo turno, y también se puede activar al obtener acumulaciones de Ventaja en el bolsillo por encima del límite.
       e4TargetStandoffVulnerability:
-        text: E4 Vulnerabilidad de Habilidad
+        text: E4 Vulnerabilidad por Habilidad
         content: >-
           Cuando el enemigo con Duelo a muerte es atacado por Boothill, el daño recibido aumenta un 12% adicional. Cuando Boothill es atacado por un enemigo con Duelo a muerte, el efecto de aumento de daño recibido disminuye en un 12%.
       e6AdditionalBreakDmg:
@@ -1050,7 +1096,7 @@ Characters:
         text: Mejora de VEL
         content: Cuando los PV actuales de Castorice son iguales o superiores al 50% de sus PV máx., su VEL aumenta en un 40%.
       talentDmgStacks:
-        text: Acum. daño del Talento
+        text: Acums. daño de Talento
         content: Cuando los aliados pierden PV, el daño que infligen Castorice y el Dragón Caído aumenta en un {{DmgBuff}}%. Este efecto se puede acumular hasta 3 veces y dura 3 turnos.
       memoSkillEnhances:
         text: Potenc. Habilidadᴹ
@@ -1062,8 +1108,11 @@ Characters:
         text: Aum. de daño al equipo
         content: Cuando el Dragón Caído es invocado, el daño que infligen todos los aliados aumenta en un 10% durante 3 turnos.
       memoDmgStacks:
-        text: Acum. de daño mnemo
+        text: Acums. de dañoᴹ
         content: Cada vez que el Dragón Caído lanza Aliento que prende las sombras, el daño que inflige aumenta en un 30%. Este efecto se puede acumular hasta 6 veces y dura hasta el final de ese turno.
+      cyreneSpecialEffect:
+        text: Efecto especial de Cirene
+        content: Al lanzarse sobre Castorice, Nuevo brote puede tener un excedente de hasta el 200%. Al invocar al Dragón Caído, se consume todo el exceso de Nuevo brote. Por cada 1% de exceso consumido, aumenta en un 0.24/0.264% el multiplicador del daño que inflige el Dragón Caído invocado esta vez al activar el efecto del talento "Alas que abaten las ruinas". Si en el campo de batalla hay 2 enemigos o menos al invocarlo, el multiplicador de daño aumenta adicionalmente en un 0.48%/0.528%.
       e1EnemyHp50:
         text: E1 PV del enemigo ≤ 50%
         content: Cuando los PV actuales del enemigo son iguales o inferiores al 50% de sus PV máx., el daño que le infligen Garra ósea, abrazo del dragón lóbrego, Garras que rasgan la oscuridad, Aliento que prende las sombras y Alas que abaten las ruinas es un 140% del daño original.
@@ -1075,17 +1124,41 @@ Characters:
     Content:
       spdBuff:
         text: Mejora de VEL
+        content: Al lanzar la habilidad básica, su VEL y la del compañero de equipo con Mérito militar aumenta en 20 pts. durante 3 turnos.
       crBuff:
         text: Mejora PC
+        content: La Prob. CRIT de Céridra aumenta en un 100%.
+      atkToCd:
+        text: ATQ a DC
+        content: Cuando el ATQ de Céridra es superior a 2000 puntos, por cada 100 puntos de exceso, su Daño CRIT aumenta en un 18%, hasta un máximo del 360%.
       e2DmgBoost:
         text: E2 Aumento de daño
+        content: El daño que inflige el personaje con Mérito militar aumenta en un 40%. Cuando hay un compañero de equipo con Mérito militar en el campo de batalla, el daño que inflige Céridra aumenta en un 160%.
       e4UltDmg:
         text: E4 Daño Definitiva
+        content: El multiplicador de daño de la habilidad definitiva aumenta en un 240%.
       e6Buffs:
         text: E6 Mejoras
+        content: La PEN de la RES a todos los tipos del personaje con Mérito militar aumenta en un 20%, y el multiplicador del daño adicional activado por Mérito militar aumenta en un 300%. Cuando hay un compañero de equipo con Mérito militar en el campo de batalla, la PEN de la RES a todos los tipos de Céridra aumenta en un 20%.
     TeammateContent:
+      militaryMerit:
+        text: Mérito militar
+        content: >-
+          Al lanzar la habilidad básica, su VEL y la del compañero de equipo con Mérito militar aumenta en 20 pts. durante 3 turnos. ::BR:: El ATQ del personaje con Mérito militar aumenta en una cantidad equivalente al {{TalentAtkConversion}}% del ATQ de Céridra. ::BR:: E1: Cuando el personaje con Mérito militar inflige daño, ignora el 16% de la DEF de cada objetivo.
+      cyreneSpecialEffect:
+        text: Efecto especial de Cirene
+        content: El Daño CRIT del personaje con Mérito militar aumenta en un 30%/33%.
+      peerage:
+        text: Título nobiliario
+        content: >-
+          El personaje con Título nobiliario aumenta el Daño CRIT y la PEN de la RES a todos los tipos de su daño de habilidad básica en un {{SkillCdBuff}}% y un {{SkillResPenBuff}}% respectivamente. ::BR:: E1: Si Mérito militar ya ha mejorado a Título nobiliario, el daño de habilidad básica que inflige ese personaje ignora un 20% adicional de la DEF de cada objetivo.
+      teammateATKValue:
+        text: ATQ en combate de Céridra
+        content: >-
+          El ATQ del personaje con Mérito militar aumenta en una cantidad equivalente al {{TalentAtkConversion}}% del ATQ de Céridra. ::BR:: Ajusta esto al valor de ATQ propio de Céridra que usa para mejorar aliados.
       e1DefPen:
         text: E1 PEN DEF
+        content: Cuando el personaje con Mérito militar inflige daño, ignora el 16% de la DEF de cada objetivo. Si Mérito militar ya ha mejorado a Título nobiliario, el daño de habilidad básica que inflige ese personaje ignora un 20% adicional de la DEF de cada objetivo.
   Cipher:
     Content:
       vulnerability:
@@ -1100,6 +1173,9 @@ Characters:
       spdBasedBuffs:
         text: Mejoras por VEL
         content: Cuando la VEL de Cífer es igual o superior a 140/170, su Prob. CRIT aumenta en un 25%/50%.
+      cyreneSpecialEffect:
+        text: Efecto especial de Cirene
+        content: El daño que inflige Cífer aumenta en un 36/39.6% y la DEF del Cliente habitual se reduce en un 20%/22%. La DEF de los enemigos que no sean el Cliente habitual se reduce en un 12%/13.2%.
       e1AtkBuff:
         text: E1 Mejora de ATQ
         content: Cuando se lanza el ataque adicional del talento, el ATQ de Cífer aumenta en un 80% durante 2 turnos.
@@ -1126,6 +1202,49 @@ Characters:
       e4DmgReductionBuff:
         text: E4 Mejora de reducción de daño
         content: Reduce el daño recibido en un 30%.
+  Cyrene:
+    Content:
+      memospriteActive:
+        text: Mnemoduende activo
+        content: >-
+          La Prob. CRIT de Cirene y del Demiurgo aumenta en un {{CRBuff}}%. ::BR:: Los PV máx. de Cirene y el Demiurgo aumentan en un {{HPBuff}}%. ::BR:: Cirene potencia su ATQ básico a ♪ Por el amor y el mañana ♪ y solo puede usar este ATQ básico.
+      zoneActive:
+        text: Zona activa
+        content: Mientras el campo está activo, cada vez que cualquier aliado inflige daño, inflige adicionalmente un {{TrueDmg}}% del daño original como Daño verdadero.
+      talentDmgBuff:
+        text: Mejora daño del talento
+        content: Cuando Cirene está en el campo de batalla, el daño que infligen todos los aliados aumenta en un {{DmgBuff}}%.
+      traceSpdBasedBuff:
+        text: Mejora por VEL del rastro
+        content: Cuando la VEL de Cirene es superior o igual a 180, el daño que infligen todos los aliados aumenta en un 20%. Después, por cada punto de VEL de exceso, la PEN de la RES a Hielo de Cirene y el Demiurgo aumenta en un 2%. Se cuentan hasta un máximo de 60 puntos de VEL de exceso.
+      odeToEgoExtraBounces:
+        text: Poema del yo verdadero rebotes extra
+        content: Por cada compañero de equipo distinto (excepto el Demiurgo) del que Cirene haya recibido Remembranza, cuando el Demiurgo lanza Danza de flores y flechas, inflige una vez adicional un 60% de sus PV máx. como Daño de Hielo a un enemigo al azar. 
+      e1ExtraBounces:
+        text: E1 Rebotes extra
+        content: Cuando el Demiurgo activa la habilidad de mnemoduende "Poema del yo verdadero" para lanzar Danza de flores y flechas, obtiene 6 puntos de Remembranza y aumenta en 12 la cantidad de rebotes de este ataque.
+      e2TrueDmgStacks:
+        text: E2 Acumulaciones de daño verdadero
+        content: Por cada personaje aliado distinto que reciba un efecto positivo mediante la habilidad de mnemoduende del Demiurgo, el multiplicador del Daño verdadero que infligen los aliados mediante el campo de la habilidad básica aumenta en un 6%, hasta un máximo del 24%.
+      e4BounceStacks:
+        text: E4 Acumulaciones de rebotes
+        content: Cada vez que el Demiurgo lanza Danza de flores y flechas, el multiplicador de daño de los Rebotes de la habilidad de mnemoduende "Poema del yo verdadero" aumenta en un 6% durante la batalla actual. Se puede acumular hasta 24 veces.
+      e6DefPen:
+        text: E6 PEN DEF
+        content: Cuando el Demiurgo está en el campo de batalla, la DEF de todos los enemigos se reduce en un 20%.
+    TeammateContent:
+      specialEffect:
+        text: Efecto especial
+        content: Aplica un efecto positivo a un personaje aliado. Si ese personaje es un Heredero de Crisos, le otorga un efecto especial. Si ese personaje no es un Heredero de Crisos, el daño que inflige aumenta en un {{DmgBuff}}% durante 2 turnos. También tiene efecto en su mnemoduende.
+      cyreneSpdDmg:
+        text: VEL de Cirene ≥ 180
+        content: Cuando la VEL de Cirene es superior o igual a 180, el daño que infligen todos los aliados aumenta en un 20%.
+      cyreneHp:
+        text: PV del mnemo de Cirene
+        content: El ATQ de la/el Trazacaminos (Reminiscencia) aumenta en una cantidad equivalente al {{ConversionRate}}% de los PV máx. del Demiurgo. Este efecto también se aplica a Mem.
+      cyreneCr:
+        text: PC del mnemo de Cirene
+        content: La Prob. CRIT de la/el Trazacaminos (Reminiscencia) aumenta en una cantidad equivalente al {{ConversionRate}}% de la Prob. CRIT del Demiurgo. Este efecto también se aplica a Mem.
   DanHeng:
     Content:
       talentPenBuff:
@@ -1149,6 +1268,51 @@ Characters:
         text: Acumulaciones de afecciones en enemigo
         content: >-
           Al usar su habilidad básica, el Dr. Ratio tiene una probabilidad fija del 40% de lanzar un ataque adicional contra el objetivo e infligir un Daño Imaginario equivalente al {{FuaScaling}}% de su ATQ. Por cada estado negativo que tenga el objetivo, la probabilidad fija de lanzar el ataque adicional aumenta en un 20%. Si el objetivo es derrotado antes de que se lance el ataque adicional, el ataque adicional se dirige contra otro enemigo al azar.::BR::Al infligir daño, si el objetivo tiene 3 o más estados negativos, el Dr. Ratio le inflige un 10% más de daño por cada estado negativo, hasta un aumento máximo del 50%.::BR::E2: Cuando el ataque adicional de su talento golpea a un enemigo, el Dr. Ratio inflige un 20% de su ATQ como Daño Imaginario adicional por cada estado negativo que tenga el objetivo. Este efecto se puede activar un máximo de 4 veces cada vez que use su ataque adicional.
+  Evernight:
+    Content:
+      memoTalentDmgBuff:
+        text: Mejora de daño talentoᴹ
+        content: Mientras Nox está en la batalla, el daño que infligen Larganoche y Nox aumenta en un {{MemoTalentDmgBuff}}%.
+      traceCritBuffs:
+        text: Mejoras CRIT del rastro
+        content: La Prob. CRIT de Larganoche y el mnemoduende Nox aumenta en un 35%. Al lanzar una habilidad, consume un 5% de sus PV actuales y hace que el Daño CRIT de ambas aumente en un 15% durante 2 turnos.
+      skillMemoCdBuff:
+        text: Mejora DC habilidadᴹ
+        content: Consume un 10% de los PV actuales de Larganoche para invocar al mnemoduende Nox y aumenta el Daño CRIT de todos los mnemoduendes aliados en una cantidad equivalente al {{SkillMemoCdBuff}}% del Daño CRIT de Larganoche durante 2 turnos.
+      talentMemoCdBuff:
+        text: Mejora DC talentoᴹ
+        content: Cada vez que se reducen los PV de Larganoche o de Nox, el Daño CRIT de ambas aumenta en un {{TalentCdScaling}}% durante 2 turnos.
+      memoriaStacks:
+        text: Acums. de Memoria
+        content: >-
+          Esta habilidad selecciona automáticamente a su objetivo y se lanza priorizando atacar al último enemigo atacado por Larganoche. Inflige a un enemigo un Daño de Hielo equivalente al {{MemoSkillScaling}}% de los PV máx. de Nox. Por cada 4 pts. de Memoria que tenga Larganoche, inflige un Daño de Hielo equivalente al {{MemoSkillAdditionalScaling}}% de los PV máx. de Nox de forma adicional. ::BR:: Si Larganoche tiene 16 pts. o más de Memoria y no está afectada con ningún estado de Control, en cambio se lanzará Sueños que desaparecen como el rocío. Por cada punto de Memoria que tenga, Nox inflige un {{MemoSkillEnhancedScaling}}% de sus PV máx. como Daño de Hielo al objetivo principal.
+      enhancedState:
+        text: Estado potenciado
+        content: Lanzar su habilidad definitiva hace que Larganoche entre en el estado de "Adivinanza oscura". Durante este estado, el daño que reciben los enemigos aumenta en un {{UltVulnScaling}}%, el daño que infligen Larganoche y Nox aumenta en un {{UltDmgBoostScaling}}%.
+      cyreneSpecialEffect:
+        text: Efecto especial de Cirene
+        content: >-
+          El daño que inflige Nox cuando lanza la habilidad de mnemoduende "Sueños que desaparecen como el rocío" aumenta en un 18%/19.8%. ::BR:: El efecto de aumento de Daño CRIT de la habilidad básica de Larganoche aumenta adicionalmente en una cantidad equivalente al 12%/13.2% del Daño CRIT de Larganoche.
+      e1FinalDmg:
+        text: E1 Daño final
+        content: Cuando Larganoche está en la batalla y hay 4 o más/3/2/1 enemigos en el campo de batalla, el daño que infligen los mnemoduendes aliados es un 120%/125%/130%/150% del daño original.
+      e2CdBuff:
+        text: E2 Mejora DC
+        content: El Daño CRIT de Larganoche y el mnemoduende Nox aumenta en un 40%.
+      e4Buffs:
+        text: E4 Mejoras
+        content: Cuando Larganoche está en la batalla, la eficiencia de la Ruptura de Debilidad de los mnemoduendes aliados aumenta en un 25%. La eficiencia de la Ruptura de Debilidad del mnemoduende Nox aumenta en un 25% adicional.
+      e6ResPen:
+        text: E6 PEN RES
+        content: Cuando Larganoche está en la batalla, la PEN de la RES a todos los tipos de todos los aliados aumenta en un 20%. Después de que el mnemoduende Nox lance Sueños que desaparecen como el rocío, Larganoche obtiene el 30% de la Memoria consumida en este ataque.
+    TeammateContent:
+      skillMemoCdBuff:
+        text: Mejora DC habilidadᴹ
+        content: Al lanzar la habilidad básica, aumenta el Daño CRIT de todos los mnemoduendes aliados en una cantidad equivalente al {{SkillCdScaling}}% del Daño CRIT de Larganoche durante 2 turnos.
+      evernightCombatCD:
+        text: DC en combate de Larganoche
+        content: >-
+          Al lanzar la habilidad básica, aumenta el Daño CRIT de todos los mnemoduendes aliados en una cantidad equivalente al {{SkillCdScaling}}% del Daño CRIT de Larganoche durante 2 turnos. ::BR:: Ingresa el DC propio de Larganoche que usa para mejorar aliados.
   Feixiao:
     Content:
       weaknessBrokenUlt:
@@ -1384,8 +1548,11 @@ Characters:
         text: Estado Cielo lavado
         content: Luego de usar su Definitiva, Hyacine entra en el estado de Cielo lavado durante 3 turnos. La duración se reduce en 1 cada vez que Hyacine comienza su turno. En el estado Cielo lavado, los PV máx. de todos los aliados aumentan en un {{UltHpBuffScaling}}% + {{UltHpBuffFlat}}.
       healingDmgStacks:
-        text: Acumulaciones de daño por curación
+        text: Acum. daño / curación
         content: Cuando Hyacine o Ica realizan una curación, el daño que inflige Ica aumenta en un {{TalentDmgBuff}}% durante 2 turnos. Se puede acumular hasta 3 veces.
+      healTallyMultiplier:
+        text: Multipl. curación acum.
+        content: La implementación actual considera una sola curación para el daño de la habilidad del mnemoduende. Este multiplicador puede ajustarse para escalar el daño de la habilidad del mnemoduende y reflejar mejor el daño dentro del juego.
       e1HpBuff:
         text: E1 Mejora de PV
         content: Cuando Hyacine está en el estado de Cielo lavado, todos los aliados aumentan sus PV máx. en un 50% adicional.
@@ -1400,16 +1567,40 @@ Characters:
         content: Cuando Ica está en el campo de batalla, la PEN de la RES a todos los tipos de todos los aliados aumenta en un 20%.
   Hysilens:
     Content:
+      skillVulnerability:
+        text: Vulnerabilidad por Habilidad
+        content: La habilidad básica de Hysilens tiene una probabilidad base del 100% de aumentar el daño que reciben todos los enemigos en un {{SkillVuln}}% durante 3 turnos.
       ultZone:
         text: Campo de Definitiva activado
+        content: Al lanzar su habilidad definitiva, Hysilens despliega un campo que reduce el ATQ de los enemigos en un 15% y la DEF en un {{ZoneDefShred}}%.
+      ultDotStacks:
+        text: Acumulaciones de detonaciones DoT de Definitiva
+        content: Cuando Hysilens lanza su habilidad definitiva, si el enemigo está afectado con estados de Daño con el tiempo, todos los estados de Daño con el tiempo que tiene actualmente infligen inmediatamente un daño equivalente al 150% de su daño original.
       ehrToDmg:
         text: AdE a aumento de daño
+        content: Si el acierto de efecto de Hysilens es superior al 60%, por cada 10% de exceso, el daño que inflige aumenta en un 15%, hasta un aumento máximo del 90%.
+      dotDetonation:
+        text: Detonación DoT (Activación automática)
+        content: Cuando Hysilens lanza su habilidad definitiva, si el enemigo está afectado con estados de Daño con el tiempo, todos los estados de Daño con el tiempo que tiene actualmente infligen inmediatamente un daño equivalente al 150% de su daño original.
+      cyreneSpecialEffect:
+        text: Efecto especial de Cirene
+        content: >-
+          El daño que inflige Hysilens aumenta en un 120%/132%. ::BR:: Después de lanzar un ATQ básico contra el enemigo, todos los estados de Daño con el tiempo que tengan los enemigos atacados infligen un 60%/66% del daño original. ::BR:: Después de lanzar una habilidad básica contra el enemigo, todos los estados de Daño con el tiempo que tengan los enemigos atacados infligen un 80%/88% del daño original.
       e1Buffs:
         text: E1 Mejoras
+        content: >-
+          Cuando Hysilens está en el campo de batalla, el Daño con el tiempo que infligen los aliados es un 116% del original. ::BR:: Cuando Hysilens afecta a un enemigo con Intemperie, Sangrado, Quemadura o Electrocución mediante su talento, tiene una probabilidad base del 100% de afectarlo adicionalmente con un estado de Intemperie, Sangrado, Quemadura o Electrocución equivalente al del talento y que puede coexistir con él.
       e4ResPen:
         text: E4 PEN RES
+        content: Mientras dure el campo, la RES a todos los tipos de todos los enemigos se reduce en un 20%.
       e6Buffs:
         text: E6 Mejoras
+        content: Mientras el campo está activo, el número máximo de veces que se puede activar el efecto de Daño Físico con el tiempo de Hysilens al principio de cada turno o tras cada ataque de un aliado aumenta a 12, y el multiplicador del daño infligido aumenta en un 20%.
+    TeammateContent:
+      e2TeammateEhr:
+        text: "E2 AdE en combate de Hysilens"
+        content: >-
+          Mientras el campo está activo, el efecto de aumento de daño infligido del Rastro Cuerdas perladas se aplica a todos los aliados. ::BR:: Si el acierto de efecto de Hysilens es superior al 60%, por cada 10% de exceso, el daño que inflige aumenta en un 15%, hasta un aumento máximo del 90%.
   ImbibitorLunae:
     Content:
       basicEnhanced:
@@ -1677,6 +1868,9 @@ Characters:
       hpToCrConversion:
         text: Conversión PV a PC
         content: Al comenzar la batalla, si los PV máx. de Midei son superiores a 4000, por cada 100 PV de exceso su Prob. CRIT aumenta en un 1.2%, la proporción de carga obtenida al recibir daño de los enemigos aumenta en un 2.5%, y los PV regenerados al recibir curación aumentan en un 0.75%. Se pueden calcular como máximo 4000 PV de exceso.
+      cyreneSpecialEffect:
+        text: Efecto especial de Cirene
+        content: Si Midei está en el estado Venganza de sangre, lanza automáticamente "Deicidio, ascenso divino" 1 vez sin consumir carga y su Daño CRIT en este ataque aumenta en un 200%/220%. 
       e1EnhancedSkillBuff:
         text: E1 Aumento de Habilidad potenciada
         content: El multiplicador del daño que Deicidio, ascenso divino inflige al objetivo principal aumenta en un 30%. Deicidio, ascenso divino pasa a infligir a todos los enemigos un Daño Imaginario equivalente al multiplicador de daño del objetivo principal.
@@ -1703,6 +1897,27 @@ Characters:
       e4SkillResShred:
         text: E4 Reducción de la RES a Hielo de la Habilidad
         content: Al usar la habilidad básica, hay una probabilidad base del 100% de reducir la RES a Hielo del enemigo en un 12% durante 2 turnos.
+  PermansorTerrae:
+    TeammateContent:
+      bondmate:
+        text: Camarada
+        content: Al lanzar la habilidad básica, el ATQ del objetivo designado como Camarada aumenta en una cantidad equivalente al 15% del ATQ de Dan Heng - Permansor Terrae. El Camarada gana posesión de la invocación Espiridraco.
+      sourceAtk:
+        text: ATQ en combate de Dan Heng
+        content: >-
+          Al lanzar la habilidad básica, el ATQ del objetivo designado como Camarada aumenta en una cantidad equivalente al 15% del ATQ de Dan Heng - Permansor Terrae. ::BR:: Ingresa el ATQ propio de Dan Heng - Permansor Terrae que usa para mejorar aliados.
+      cyreneSpecialEffect:
+        text: Efecto especial de Cirene
+        content: El daño que inflige el Camarada aumenta en un 24%/26.4%.
+      e1ResPen:
+        text: E1 PEN RES
+        content: Cuando Dan Heng - Permansor Terrae lanza la habilidad definitiva, la PEN de la RES a todos los tipos del Camarada aumenta en un 18% durante 3 turnos.
+      e4DmgReduction:
+        text: E4 Reducción de daño
+        content: El daño que recibe el Camarada se reduce en un 20%.
+      e6Buffs:
+        text: E6 Mejoras
+        content: Cuando hay un Camarada en la batalla, el daño que reciben todos los enemigos aumenta en un 20%, y cuando el Camarada inflige daño, ignora un 12% de la DEF del enemigo.
   Phainon:
     Content:
       transformedState:
@@ -1732,6 +1947,10 @@ Characters:
       spdBuff:
         text: Mejora de VEL al equipo
         content: Al terminar la transformación, la VEL de todos los aliados aumenta en un 15% durante 1 turno.
+      cyreneSpecialEffect:
+        text: Efecto especial de Cirene
+        content: >-
+          Fainón recibe 6 pts. de Yesca y obtiene Combustión perpetua al transformarse. ::BR:: Si al transformarse tiene más de 12 pts. de Yesca, por cada pt. excedente el Daño CRIT de Khaslana aumenta en un 12%/13.2%, hasta un máximo del 72%/79.2%. Cuando tiene Combustión perpetua, la Prob. CRIT de Khaslana aumenta en un 16%/17.6%. ::BR:: Tras atacar, inflige daño adicional 5 veces, infligiendo cada vez un Daño de Fuego adicional equivalente al 10%/11% del ATQ de Khaslana a un enemigo al azar.
       e1Buffs:
         text: E1 Mejoras
         content: >-
@@ -1753,7 +1972,7 @@ Characters:
         text: Mejora de VEL del Básico potenciado
         content: Tras utilizar el ATQ básico potenciado, la VEL de Qingque aumenta en un 10% durante 1 turno.
       skillDmgIncreaseStacks:
-        text: Acum. de aumento de daño por Habilidad
+        text: Acums. de aumento de daño por Habilidad
         content: Roba 2 fichas de jade e inflige un {{skillStackDmg}}% más de daño hasta que termine el turno. Este efecto se puede acumular hasta 4 veces.
   Rappa:
     Content:
@@ -1809,7 +2028,7 @@ Characters:
       teammateATKValue:
         text: ATQ en combate de Robin
         content: >-
-          Mientras está en el estado de Concierto, el ATQ de todos los aliados aumenta en una cantidad equivalente al {{ultAtkBuffScalingValue}}% + {{ultAtkBuffFlatValue}} del ATQ de Robin.::BR::Configura esto al ATQ propio de Robin que usa para mejorar a aliados.
+          Mientras está en el estado de Concierto, el ATQ de todos los aliados aumenta en una cantidad equivalente al {{ultAtkBuffScalingValue}}% + {{ultAtkBuffFlatValue}} del ATQ de Robin. ::BR:: Ingresa el ATQ propio de Robin que usa mejorar aliados.
       traceFuaCdBoost:
         text: Aumento DC ataque adicional
         content: Cuando está en el estado de Concierto, el Daño CRIT que infligen todos los aliados con sus ataques adicionales aumenta en un 25%.
@@ -1985,7 +2204,7 @@ Characters:
         content: >-
           Hace que un personaje aliado y su invocación actúen inmediatamente y aumenta en un {{DmgBoost}}% el daño que infligen. Si el objetivo tiene una invocación, el efecto de aumento de daño se incrementa en un {{SummonDmgBoost}}% adicional.
       talentCrBuffStacks:
-        text: Acum. de la mejora de PC
+        text: Acums. de la mejora de PC
         content: Al lanzar la habilidad básica, la Prob. CRIT del objetivo aumenta en un {{CritRateBoost}}%. Dura 3 turnos.
       techniqueDmgBuff:
         text: Mejora daño de Técnica
@@ -2020,15 +2239,27 @@ Characters:
         text: Golpes extra de Habilidad
         content: Aumenta el número de golpes extra de Postura espadachina de la Habilidad.
       skillTriggerStacks:
-        text: Acum. de activaciones de la Habilidad
+        text: Acums. de activaciones de la Habilidad
         content: El daño que inflige Postura espadachina aumenta en un 2.5% cada vez que se activa. Este efecto se puede acumular hasta 10 veces.
       talentSpdBuffStacks:
-        text: Acum. de mejora de VEL del Talento
+        text: Acums. de mejora de VEL del Talento
         content: >-
           Cuando se rompe la Debilidad de un enemigo en la batalla, la VEL de Sushang aumenta en un {{talentSpdBuffValue}}% durante 2 turnos.::BR::E6: El efecto de aumento de VEL del talento se puede acumular hasta 2 veces.
       e2DmgReductionBuff:
         text: E2 Mejora de reducción de daño
         content: Tras activar Postura espadachina, el daño que recibe Sushang se reduce en un 20% durante 1 turno.
+  TheDahlia:
+    Content:
+      superBreakDmg:
+        text: Daño de Ultrarruptura (forzar rupt. de debilidad)
+      spdBuff:
+        text: Mejora de VEL
+      e1Buffs:
+        text: E1 Mejoras
+      e2ResPen:
+        text: E2 PEN RES
+      e6BeBuff:
+        text: E6 Mejora de EdR
   TheHerta:
     Content:
       enhancedSkill:
@@ -2117,7 +2348,7 @@ Characters:
     TeammateContent:
       teammateBeValue:
         text: E4 EdR en combate
-        content: Mientras la(el) Trazacaminos está en el campo de batalla, el efecto de Ruptura de todos los aliados excepto ella(él) aumenta en una cantidad equivalente al 15% del efecto de Ruptura de la(del) Trazacaminos.
+        content: Mientras la/el Trazacaminos está en el campo de batalla, el efecto de Ruptura de todos los aliados excepto ella/él aumenta en una cantidad equivalente al 15% del efecto de Ruptura de la/del Trazacaminos.
   TrailblazerPreservation:
     Content:
       enhancedBasic:
@@ -2125,15 +2356,17 @@ Characters:
         content: El ATQ básico potenciado inflige un {{basicEnhancedAtkScaling}}% del ATQ de la(del) Trazacaminos como Daño de Fuego a un enemigo y daño reducido a los enemigos adyacentes.
       skillActive:
         text: Reducción de daño de la Habilidad
-        content: Tras usar la habilidad básica, el daño que recibe la(el) Trazacaminos se reduce en un {{skillDamageReductionValue}}%. También se reduce el daño que reciben todos los aliados en un 15% durante 1 turno.
+        content: Tras usar la habilidad básica, el daño que recibe la/el Trazacaminos se reduce en un {{skillDamageReductionValue}}%. También se reduce el daño que reciben todos los aliados en un 15% durante 1 turno.
       shieldActive:
         text: Escudo activado
-        content: "Si la(el) Trazacaminos está protegida(o) por un escudo, su ATQ aumenta en un 15%.\n"
+        content: "Si la/el Trazacaminos está protegida(o) por un escudo, su ATQ aumenta en un 15%.\n"
       e6DefStacks:
         text: E6 Acumulaciones de la mejora de DEF
         content: Aumenta la DEF en un 10% por acumulación.
   TrailblazerRemembrance:
     Content:
+      enhancedBasic:
+        text: Básico potenciado
       memoSkillHits:
         text: Golpes de Habilidad Mnemo
         content: >-
@@ -2183,6 +2416,9 @@ Characters:
       talentFuaStacks:
         text: Acumulaciones de ataque adicional
         content: Después de lanzar el ataque adicional del talento, el daño que inflige Tribbie aumenta en un 72%. Este efecto se puede acumular hasta 3 veces y dura 3 turnos.
+      cyreneSpecialEffect:
+        text: Efecto especial de Cirene
+        content: El daño que inflige Tribbie ignora un 12%/13.2% de la DEF del enemigo. Cuando el ataque adicional de Tribbie activa el daño adicional de su campo, inflige daño adicional 1 vez más.
       e1TrueDmg:
         text: E1 Daño verdadero
         content: Después de que un aliado ataque al enemigo mientras el campo está activo, inflige adicionalmente al objetivo que recibe el daño adicional del campo un Daño verdadero equivalente al 24% del daño total del ataque.

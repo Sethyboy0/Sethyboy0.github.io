@@ -63,7 +63,7 @@ OptimizerOptions:
   PriorityFilter: Character priority filter
   Priority:
     Header: Priority
-    Label: '# {{rank}} - $t(common:Characters.{{id}}.Name)'
+    Label: '# {{rank}} - $t(common:Characters.{{id}}.LongName)'
     Name: '# {{rank}}'
   AllowEquipped: Allow equipped relics
   KeepCurrent: Keep current relics
@@ -494,8 +494,16 @@ TeammateCard:
       Set: '$t(gameData:RelicSets.121.Name)'
       Text: 36% CD
     Warrior:
-      Desc: '$t(gameData:RelicSets.125.Name) (+15% CD)'
+      Desc: '4 Piece: $t(gameData:RelicSets.125.Name) (+15% CD)'
       Set: '$t(gameData:RelicSets.125.Name)'
+      Text: 15% CD
+    WorldRemaking:
+      Desc: '4 Piece: $t(gameData:RelicSets.127.Name) (+15% DMG)'
+      Set: '$t(gameData:RelicSets.127.Name)'
+      Text: 15% DMG
+    SelfEnshrouded:
+      Desc: '4 Piece: $t(gameData:RelicSets.128.Name) (+15% CD)'
+      Set: '$t(gameData:RelicSets.128.Name)'
       Text: 15% CD
     Keel:
       Desc: '$t(gameData:RelicSets.310.Name) (+10% CD)'
@@ -513,6 +521,10 @@ TeammateCard:
       Desc: '$t(gameData:RelicSets.317.Name) (+12% ATK)'
       Set: '$t(gameData:RelicSets.317.Name)'
       Text: 12% ATK
+    Amphoreus:
+      Desc: '$t(gameData:RelicSets.323.Name) (+8% SPD)'
+      Set: '$t(gameData:RelicSets.323.Name)'
+      Text: 8% SPD
 StatSimulation:
   DuplicateSimMessage: Identical stat simulation already exists
   MissingMainstatsMessage: Missing simulation main stats
@@ -631,6 +643,7 @@ ExpandedDataPanel:
           DEF PEN: DEF PEN
           Break DEF PEN: Break DEF PEN
           Toughness DMG: Toughness DMG
+          Fixed Toughness DMG: Fixed Toughness DMG
           Super Break multiplier: Super Break multiplier
           Break Efficiency boost: Break Efficiency boost
           True DMG multiplier: True DMG multiplier

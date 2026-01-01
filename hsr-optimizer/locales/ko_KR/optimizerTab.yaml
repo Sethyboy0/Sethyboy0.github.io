@@ -63,7 +63,6 @@ OptimizerOptions:
   PriorityFilter: 캐릭터 우선순위 필터
   Priority:
     Header: 우선순위
-    Label: '# {{rank}} - $t(common:Characters.{{id}}.Name)'
     Name: '# {{rank}}'
   AllowEquipped: 장착된 유물 포함
   KeepCurrent: 현재 유물 유지
@@ -494,8 +493,9 @@ TeammateCard:
       Set: '$t(gameData:RelicSets.121.Name)'
       Text: 치피 36%
     Warrior:
-      Desc: '$t(gameData:RelicSets.125.Name) (+15% 치피)'
       Set: '$t(gameData:RelicSets.125.Name)'
+      Text: 치피 15%
+    SelfEnshrouded:
       Text: 치피 15%
     Keel:
       Desc: '$t(gameData:RelicSets.310.Name) (+10% 치피)'

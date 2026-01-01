@@ -63,7 +63,6 @@ OptimizerOptions:
   PriorityFilter: Filtre de priorité de pers.
   Priority:
     Header: Priorité
-    Label: '# {{rank}} - $t(common:Characters.{{id}}.Name)'
     Name: '# {{rank}}'
   AllowEquipped: Filtre reliques équipées
   KeepCurrent: Garder reliques courantes
@@ -494,8 +493,10 @@ TeammateCard:
       Set: '$t(gameData:RelicSets.121.Name)'
       Text: 36% DC
     Warrior:
-      Desc: '$t(gameData:RelicSets.125.Name) (+15% DC)'
+      Desc: '4 Pièces: $t(gameData:RelicSets.125.Name) (+15% DC)'
       Set: '$t(gameData:RelicSets.125.Name)'
+      Text: 15% DC
+    SelfEnshrouded:
       Text: 15% DC
     Keel:
       Desc: '$t(gameData:RelicSets.310.Name) (+10% DC)'
@@ -513,6 +514,10 @@ TeammateCard:
       Desc: '$t(gameData:RelicSets.317.Name) (+12% ATQ)'
       Set: '$t(gameData:RelicSets.317.Name)'
       Text: 12% ATQ
+    Amphoreus:
+      Desc: '$t(gameData:RelicSets.323.Name) (+8% VIT)'
+      Set: '$t(gameData:RelicSets.323.Name)'
+      Text: 8% VIT
 StatSimulation:
   DuplicateSimMessage: Une simulation identique existe déjà
   MissingMainstatsMessage: Les mainstats de simulation sont manquantes
