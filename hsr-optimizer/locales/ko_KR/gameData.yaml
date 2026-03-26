@@ -9,8 +9,8 @@ Characters:
     Name: 히메코
     LongName: 히메코
   "1004":
-    Name: 웰트
-    LongName: 웰트
+    Name: ⚰️ 웰트
+    LongName: ⚰️ 웰트
   "1005":
     Name: ⚰️ 카프카
     LongName: ⚰️ 카프카
@@ -36,8 +36,8 @@ Characters:
     Name: 브로냐
     LongName: 브로냐
   "1102":
-    Name: 제레
-    LongName: 제레
+    Name: ⚰️ 제레
+    LongName: ⚰️ 제레
   "1103":
     Name: 서벌
     LongName: 서벌
@@ -114,8 +114,8 @@ Characters:
     Name: 한아
     LongName: 한아
   "1217":
-    Name: 곽향
-    LongName: 곽향
+    Name: ⚰️ 곽향
+    LongName: ⚰️ 곽향
   "1218":
     Name: 초구
     LongName: 초구
@@ -153,11 +153,11 @@ Characters:
     Name: "Dr.\_레이시오"
     LongName: "Dr.\_레이시오"
   "1306":
-    Name: 스파클
-    LongName: 스파클
+    Name: ⚰️ 스파클
+    LongName: ⚰️ 스파클
   "1307":
-    Name: "블랙\_스완"
-    LongName: "블랙\_스완"
+    Name: "⚰️ 블랙\_스완"
+    LongName: "⚰️ 블랙\_스완"
   "1308":
     Name: 아케론
     LongName: 아케론
@@ -165,8 +165,8 @@ Characters:
     Name: 로빈
     LongName: 로빈
   "1310":
-    Name: 반디
-    LongName: 반디
+    Name: ⚰️ 반디
+    LongName: ⚰️ 반디
   "1312":
     Name: 미샤
     LongName: 미샤
@@ -227,6 +227,21 @@ Characters:
   "1415":
     Name: 키레네
     LongName: 키레네
+  "1501":
+    Name: 스파키
+    LongName: 스파키
+  "1502":
+    Name: 효광
+    LongName: 효광
+  "1504":
+    Name: Ashveil
+    LongName: Ashveil
+  "1505":
+    Name: Evanescia
+    LongName: Evanescia
+  "1506":
+    Name: Silver Wolf LV.999
+    LongName: Silver Wolf LV.999
   "8001":
     Name: 카일루스
     LongName: 카일루스 (파멸)
@@ -251,6 +266,12 @@ Characters:
   "8008":
     Name: 스텔레
     LongName: 스텔레 (기억)
+  "8009":
+    Name: 카일루스
+    LongName: 카일루스 (환락)
+  "8010":
+    Name: 스텔레
+    LongName: 스텔레 (환락)
   1212b1:
     Name: 경류
     LongName: 경류
@@ -263,6 +284,24 @@ Characters:
   1006b1:
     Name: 은랑
     LongName: 은랑
+  1307b1:
+    Name: "블랙\_스완"
+    LongName: "블랙\_스완"
+  1306b1:
+    Name: 스파클
+    LongName: 스파클
+  1004b1:
+    Name: 웰트
+    LongName: 웰트
+  1102b1:
+    Name: 제레
+    LongName: 제레
+  1217b1:
+    Name: 곽향
+    LongName: 곽향
+  1310b1:
+    Name: 반디
+    LongName: 반디
 RelicSets:
   "101":
     Name: "흔적을\_남기지\_않은\_과객"
@@ -376,6 +415,14 @@ RelicSets:
     Name: "별빛에\_숨은\_은둔자"
     Description2pc: "제공하는\_실드량\_10%\_증가"
     Description4pc: "장착한\_캐릭터가\_제공하는\_실드량이\_12%\_증가하고,\_아군이\_장착한\_캐릭터가\_제공한\_실드\_보유\_시\_치명타\_피해가\_15%\_증가한다"
+  "129":
+    Name: "빛나는\_공훈의\_마법\_소녀"
+    Description2pc: "치명타\_피해\_16%\_증가"
+    Description4pc: "장착한\_캐릭터와\_해당\_캐릭터의\_기억\_정령이\_가하는\_환락\_피해가\_목표의\_방어력을\_10%\_무시하고,\_아군이\_웃음\_포인트를\_누적\_5pt\_획득할\_때마다\_가하는\_환락\_피해가\_추가로\_목표의\_방어력을\_1%\_무시한다,\_최대\_중첩수:\_10스택"
+  "130":
+    Name: "천명에\_응해\_먼\_길을\_떠난\_점술가"
+    Description2pc: "속도\_6%\_증가"
+    Description4pc: "전투\_진입\_전,\_장착한\_캐릭터의\_속도가\_120/160\_이상일\_시\_장착한\_캐릭터의\_치명타\_확률이\_10%/18%\_증가한다.\_장착한\_캐릭터가\_각\_전투에서\_처음으로\_환락\_스킬\_발동\_시\_모든\_아군의\_환락도가\_10%\_증가하며,\_해당\_효과는\_중첩되지\_않는다"
   "301":
     Name: "우주\_봉인\_정거장"
     Description2pc: "장착한\_캐릭터의\_공격력이\_12%\_증가한다.\_장착한\_캐릭터의\_속도가\_120\_이상일\_경우\_공격력이\_추가로\_12%\_증가한다"
@@ -448,6 +495,12 @@ RelicSets:
   "324":
     Name: 텐고쿠@라이브스트리밍
     Description2pc: "장착한\_캐릭터의\_치명타\_피해가\_16%\_증가하며,\_같은\_턴에\_전투\_스킬\_포인트를\_3pt\_이상\_소모\_시\_추가로\_장착한\_캐릭터의\_치명타\_피해가\_32%\_증가한다,\_지속\_시간:\_3턴"
+  "325":
+    Name: Punklorde Stage Zero
+    Description2pc: Increases the wearer's Elation by 8%. When Elation reaches 40%/80% for the first time in combat, increases the wearer's CRIT DMG by 20%/32%.
+  "326":
+    Name: City of Converging Stars
+    Description2pc: When the wearer uses Follow-Up ATK, increases ATK by 24% for 2 turn(s). When an enemy target gets defeated, increases CRIT DMG for all allies by 12% in the current battle. This effect cannot stack.
 Lightcones:
   "20000":
     Name: 화살촉
@@ -495,6 +548,10 @@ Lightcones:
     Name: "불타는\_그림자"
   "20022":
     Name: "추억\_회상"
+  "20023":
+    Name: 비웃음
+  "20024":
+    Name: "눈물의\_흔적"
   "21000":
     Name: "수술\_후의\_대화"
   "21001":
@@ -617,6 +674,10 @@ Lightcones:
     Name: "휴일의\_목욕탕\_대모험"
   "21062":
     Name: "그\_종착지에서\_다시\_만나자"
+  "21064":
+    Name: "슈룸\_모험기"
+  "21065":
+    Name: "오늘의\_행운"
   "22000":
     Name: "초보자\_임무\_시작\_전"
   "22001":
@@ -631,6 +692,8 @@ Lightcones:
     Name: "영원한\_미궁의\_식사"
   "22006":
     Name: "핑크빛\_내일을\_향해"
+  "22007":
+    Name: We'll face the Hereafter together
   "23000":
     Name: "은하철도의\_밤"
   "23001":
@@ -737,6 +800,16 @@ Lightcones:
     Name: "끝없는\_산과\_강을\_거치더라도"
   "23052":
     Name: "이\_순간처럼\_영원한\_사랑"
+  "23053":
+    Name: "눈부신\_파키의\_세상"
+  "23054":
+    Name: "그녀가\_보기로\_결심했을\_때"
+  "23056":
+    Name: The Finale of a Lie
+  "23057":
+    Name: Welcome to Cosmic City
+  "23058":
+    Name: A Rendezvous in the Next Flower Season
   "24000":
     Name: "어떤\_에이언즈의\_몰락"
   "24001":
@@ -749,6 +822,8 @@ Lightcones:
     Name: "멈추지\_않는\_연산"
   "24005":
     Name: "기억은\_영원히\_막을\_내리지\_않는다"
+  "24006":
+    Name: Elation Brimming With Blessings
 Paths:
   Warrior: 파멸
   Rogue: 수렵
@@ -758,7 +833,7 @@ Paths:
   Knight: 보존
   Priest: 풍요
   Memory: 기억
-  Unknown: 범용
+  Elation: 환락
 Elements:
   Physical: 물리
   Fire: 화염

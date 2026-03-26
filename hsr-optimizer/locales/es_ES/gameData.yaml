@@ -9,8 +9,8 @@ Characters:
     Name: Himeko
     LongName: Himeko
   "1004":
-    Name: Welt
-    LongName: Welt
+    Name: ⚰️ Welt
+    LongName: ⚰️ Welt
   "1005":
     Name: ⚰️ Kafka
     LongName: ⚰️ Kafka
@@ -36,8 +36,8 @@ Characters:
     Name: Bronya
     LongName: Bronya
   "1102":
-    Name: Seele
-    LongName: Seele
+    Name: ⚰️ Seele
+    LongName: ⚰️ Seele
   "1103":
     Name: Serval
     LongName: Serval
@@ -114,8 +114,8 @@ Characters:
     Name: Hanya
     LongName: Hanya
   "1217":
-    Name: Huohuo
-    LongName: Huohuo
+    Name: ⚰️ Huohuo
+    LongName: ⚰️ Huohuo
   "1218":
     Name: Jiaoqiu
     LongName: Jiaoqiu
@@ -153,11 +153,11 @@ Characters:
     Name: Dr. Ratio
     LongName: Dr. Ratio
   "1306":
-    Name: Sparkle
-    LongName: Sparkle
+    Name: ⚰️ Sparkle
+    LongName: ⚰️ Sparkle
   "1307":
-    Name: Cisne Negro
-    LongName: Cisne Negro
+    Name: ⚰️ Cisne Negro
+    LongName: ⚰️ Cisne Negro
   "1308":
     Name: Acheron
     LongName: Acheron
@@ -165,8 +165,8 @@ Characters:
     Name: Robin
     LongName: Robin
   "1310":
-    Name: Luciérnaga
-    LongName: Luciérnaga
+    Name: ⚰️ Luciérnaga
+    LongName: ⚰️ Luciérnaga
   "1312":
     Name: Misha
     LongName: Misha
@@ -183,8 +183,8 @@ Characters:
     Name: Rappa
     LongName: Rappa
   "1321":
-    Name: The Dahlia
-    LongName: The Dahlia
+    Name: La Dalia
+    LongName: La Dalia
   "1401":
     Name: Sra. Herta
     LongName: Sra. Herta
@@ -227,6 +227,21 @@ Characters:
   "1415":
     Name: Cirene
     LongName: Cirene
+  "1501":
+    Name: Chispa
+    LongName: Chispa
+  "1502":
+    Name: Yao Guang
+    LongName: Yao Guang
+  "1504":
+    Name: Ashveil
+    LongName: Ashveil
+  "1505":
+    Name: Evanescia
+    LongName: Evanescia
+  "1506":
+    Name: Silver Wolf LV.999
+    LongName: Silver Wolf LV.999
   "8001":
     Name: Caelus
     LongName: Caelus (Destrucción)
@@ -251,6 +266,12 @@ Characters:
   "8008":
     Name: Estela
     LongName: Estela (Reminiscencia)
+  "8009":
+    Name: Caelus
+    LongName: Caelus (Exultación)
+  "8010":
+    Name: Estela
+    LongName: Estela (Exultación)
   1212b1:
     Name: Jingliu
     LongName: Jingliu
@@ -263,6 +284,24 @@ Characters:
   1006b1:
     Name: Silver Wolf
     LongName: Silver Wolf
+  1307b1:
+    Name: Cisne Negro
+    LongName: Cisne Negro
+  1306b1:
+    Name: Sparkle
+    LongName: Sparkle
+  1004b1:
+    Name: Welt
+    LongName: Welt
+  1102b1:
+    Name: Seele
+    LongName: Seele
+  1217b1:
+    Name: Huohuo
+    LongName: Huohuo
+  1310b1:
+    Name: Luciérnaga
+    LongName: Luciérnaga
 RelicSets:
   "101":
     Name: Transeúnte de la nube pasajera
@@ -376,6 +415,14 @@ RelicSets:
     Name: Eremita aislado en las estrellas
     Description2pc: Efecto de escudo otorgado +10%.
     Description4pc: El efecto de escudo otorgado por el portador aumenta en un 12%. Cuando un aliado tiene un escudo otorgado por el portador, su Daño CRIT aumenta en un 15%.
+  "129":
+    Name: Chica mágica de hazañas gloriosas
+    Description2pc: Daño CRIT +16%.
+    Description4pc: Al infligir daño de Exultación, el portador y su mnemoduende ignoran un 10% de la DEF del objetivo. Por cada 5 pts. de Chiste acumulados por los aliados, ignoran un 1% adicional de la DEF del objetivo al infligir Daño de Exultación. Se puede acumular hasta 10 veces.
+  "130":
+    Name: Adivino de alcance remoto
+    Description2pc: VEL +6%.
+    Description4pc: Antes de entrar en combate, si la VEL del portador es igual o superior a 120/160, la Prob. CRIT del portador aumenta en un 10%/18%. La primera vez que el portador lance una habilidad de Exultación en cada combate, la Exultación de todos los aliados aumenta en un 10%. Este efecto no se puede acumular.
   "301":
     Name: Estación sellaespacios
     Description2pc: El ATQ del portador aumenta en un 12%. Cuando su VEL es igual o superior a 120, el ATQ aumenta en un 12% adicional.
@@ -448,6 +495,12 @@ RelicSets:
   "324":
     Name: Tengoku@sala de chat
     Description2pc: El Daño CRIT del portador aumenta en un 16%. Si el portador consume 3 o más pts. de habilidad básica en el mismo turno, su Daño CRIT aumenta en un 32% adicional durante 3 turnos.
+  "325":
+    Name: Punklorde Stage Zero
+    Description2pc: Increases the wearer's Elation by 8%. When Elation reaches 40%/80% for the first time in combat, increases the wearer's CRIT DMG by 20%/32%.
+  "326":
+    Name: City of Converging Stars
+    Description2pc: When the wearer uses Follow-Up ATK, increases ATK by 24% for 2 turn(s). When an enemy target gets defeated, increases CRIT DMG for all allies by 12% in the current battle. This effect cannot stack.
 Lightcones:
   "20000":
     Name: Flechas
@@ -495,6 +548,10 @@ Lightcones:
     Name: Imágenes quemadas
   "20022":
     Name: Retrospección
+  "20023":
+    Name: Risita burlona
+  "20024":
+    Name: Las lágrimas que quedan
   "21000":
     Name: Conversación en el postoperatorio
   "21001":
@@ -617,6 +674,10 @@ Lightcones:
     Name: Vacaciones en las termas
   "21062":
     Name: Nos vemos al final
+  "21064":
+    Name: Las aventuras de Champigaga
+  "21065":
+    Name: La buena suerte de hoy
   "22000":
     Name: Antes de que comience la misión del tutorial
   "22001":
@@ -631,6 +692,8 @@ Lightcones:
     Name: Viandas sin fin
   "22006":
     Name: Volando hacia un mañana rosado
+  "22007":
+    Name: We'll face the Hereafter together
   "23000":
     Name: Noche en la Vía Láctea
   "23001":
@@ -732,11 +795,21 @@ Lightcones:
   "23049":
     Name: A la estrella de la larga noche
   "23050":
-    Name: Never Forget Her Flame
+    Name: No olvides su fuego
   "23051":
     Name: A través de montañas y ríos
   "23052":
     Name: Amor eterno como este momento
+  "23053":
+    Name: El cautivador mundochispa
+  "23054":
+    Name: Cuando se decidió a ver
+  "23056":
+    Name: The Finale of a Lie
+  "23057":
+    Name: Welcome to Cosmic City
+  "23058":
+    Name: A Rendezvous in the Next Flower Season
   "24000":
     Name: Sobre la caída de un Eón
   "24001":
@@ -749,6 +822,8 @@ Lightcones:
     Name: Cálculo interminable
   "24005":
     Name: Sobre los recuerdos nunca cae el telón
+  "24006":
+    Name: Elation Brimming With Blessings
 Paths:
   Warrior: Destrucción
   Rogue: Cacería
@@ -758,7 +833,7 @@ Paths:
   Knight: Conservación
   Priest: Abundancia
   Memory: Reminiscencia
-  Unknown: General
+  Elation: Exultación
 Elements:
   Physical: Físico
   Fire: Fuego
